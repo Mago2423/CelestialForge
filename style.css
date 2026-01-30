@@ -1,0 +1,17 @@
+.xp{
+  height: 12px;
+  background: #0f0b10;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid #1f151e;
+}
+
+.xp-progress{
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #4aa34a,
+    #6ad86a
+  );
+}
