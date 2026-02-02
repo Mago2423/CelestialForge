@@ -1,17 +1,281 @@
+/* ===== Celestial Forge Website Theme (matches your current HTML) ===== */
+
+:root{
+  --bg: #0b0b10;
+  --bg-2: #10101a;
+
+  --panel: rgba(18,18,26,0.92);
+  --panel-2: rgba(23,23,38,0.92);
+
+  --gold: #ffd166;
+  --gold-2: #f5b942;
+
+  --text: #e9e6f2;
+  --muted: rgba(233,230,242,0.72);
+
+  --border: #F1C94D;
+  --border-soft: #F1C94D;
+
+  --shadow: 0 12px 30px rgba(0,0,0,0.45);
+
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  --title-font: "Cinzel", serif;
+}
+
+body{
+  background:
+    radial-gradient(900px 520px at 20% -10%, rgba(255,209,102,0.08), transparent 60%),
+    radial-gradient(900px 520px at 80% 0%, rgba(140,120,255,0.06), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg-2));
+  color: var(--text);
+}
+
+
+
+
+/* Make Cinzel control the "fantasy UI" vibe */
+h1,h2,h3,h4,h5,.navbar-brand{
+  font-family: var(--title-font);
+  letter-spacing: 0.6px;
+}
+
+/* ===== Navbar ===== */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 14px 0;
+  backdrop-filter: blur(10px);
+  background: rgba(11,11,16,0.70);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.navbar .navbar-brand{
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-brand:hover{
+  color: var(--gold-2);
+}
+
+#nav .btn{
+  margin-left: 10px;
+}
+
+.nav-active{
+  border-color: var(--gold);
+  background: rgba(255,209,102,0.14);
+  color: var(--gold);
+}
+
+/* ===== Buttons (override Bootstrap) ===== */
+.btn{
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  background: rgba(18,18,26,0.55);
+  color: var(--text);
+  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  border-color: var(--border);
+  background: rgba(23,23,38,0.75);
+  color: var(--text);
+}
+
+.btn:active{
+  transform: translateY(0px);
+}
+
+/* ===== Hero / Panels ===== */
+.hero-pad{
+  padding-top: 26px;
+}
+
+.panel{
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* Turn your two columns into gold-bordered “cards” */
+.hero-pad .col-12 > .p-4{
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  height: 100%;
+}
+
+/* Titles in header */
+header h2{
+  color: var(--text);
+  text-shadow: 0 0 18px rgba(255,209,102,0.08);
+}
+
+header .fw-bold{
+  color: var(--gold);
+}
+
+/* Divider */
+.divider{
+  border-color: #F1C94D;
+  opacity: 1;
+}
+
+/* ===== User Avatar ===== */
+.avatar{
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  border: 2px solid #F1C94D;
+  background: rgba(255,209,102,0.08);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+}
+
+/* LVL / VIP row styling */
+.col-lg-5 .fw-bold{
+  font-family: var(--title-font);
+  letter-spacing: 0.4px;
+}
+.col-lg-5 .fw-bold:last-child{
+  color: var(--gold);
+  border: 1px solid #F1C94D;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,209,102,0.08);
+}
+
+/* ===== XP Bar (your code upgraded) ===== */
 .xp{
   height: 12px;
-  background: #0f0b10;
+  background: rgba(255,255,255,0.06);
   border-radius: 999px;
   overflow: hidden;
-  border: 1px solid #1f151e;
+  border: 1px solid #F1C94D;
 }
 
 .xp-progress{
-  width: 35%;
+  width: 35%;  /* change this per level */
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    #4aa34a,
-    #6ad86a
-  );
+  background: linear-gradient(90deg, #49c276, #ffd166);
+}
+
+/* ===== Quick Access big menu buttons ===== */
+.menu-btn{
+  border-radius: var(--radius-sm);
+  border: 1px solid #F1C94D;
+  background: rgba(12,12,18,0.50);
+  padding: 14px 16px; 
+}
+
+.menu-btn span{
+  font-family: var(--title-font);
+  letter-spacing: 0.4px;
+  color: var(--text);
+  font-size: 16px;
+}
+
+.menu-btn .small{
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.menu-btn:hover{
+  border-color: #F1C94D;
+  background: rgba(18,18,26,0.70);
+}
+
+/* ===== Footer ===== */
+footer{
+  color: var(--muted);
+  border-top: 1px solid #F1C94D;
+  padding-top: 16px;
+  margin-top: 10px;
+}
+
+/* ===== Small polish ===== */
+.small{
+  color: var(--muted);
+}
+
+/* ===== Daily Quests (left panel) ===== */
+.quest-wrap{
+  padding-top: 6px;
+}
+
+.quest-title{
+  font-family: var(--title-font);
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.quest-card{
+  padding: 12px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #F1C94D;
+  background: rgba(12,12,18,0.55);
+}
+
+.quest-card + .quest-card{
+  margin-top: 10px;
+}
+
+.quest-name{
+  font-family: var(--title-font);
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.quest-sub{
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.quest-bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid #F1C94D;
+  overflow: hidden;
+}
+
+.quest-bar-fill{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #49c276, #ffd166);
+}
+
+.quest-claim{
+  border-radius: 10px;
+  padding: 7px 10px;
+  border: 1px solid #F1C94D;
+  background: rgba(255,209,102,0.08);
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.quest-claim:hover{
+  background: rgba(255,209,102,0.14);
+  border-color: #F1C94D;
+}
+
+
+/* Mobile tweaks */
+@media (max-width: 576px){
+  #nav .btn{
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
