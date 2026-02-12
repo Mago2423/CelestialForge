@@ -11,89 +11,176 @@
 
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-            <div class="container">
 
-            <a class="navbar-brand fw-bold" href="Home.html">
-                CELESTIAL FORGE
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container">
+
+        <a class="navbar-brand fw-bold" href="Home.html">
+            CELESTIAL FORGE
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="nav" class="collapse navbar-collapse">
+            <div class="ms-auto d-flex align-items-center">
+
+            <a class="btn" href="MainHub.html">
+                Main Hub
             </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div id="nav" class="collapse navbar-collapse">
-                <div class="ms-auto d-flex align-items-center">
+            <a class="btn nav-active" href="Home.html">
+                Home
+            </a>
 
-                <a class="btn" href="MainHub.html">
-                    Main Hub
-                </a>
-
-                <a class="btn nav-active" href="Home.html">
-                    Home
-                </a>
-
-                <a class="btn" href="Profile.html">
-                    Profile
-                </a>
-                </div>
+            <a class="btn" href="Profile.html">
+                Profile
+            </a>
             </div>
-            </div>
-        </nav>
-    </header>
+        </div>
+        </div>
+    </nav>
     <main>
-        <!-- Daily Quests (under user level) -->
-        <div class="quest-wrap mt-4">
-        <h6 class="quest-title mb-3">Daily Quests</h6>
 
-        <!-- Quest 1 -->
-        <div class="quest-card">
-            <div class="d-flex justify-content-between align-items-center gap-3">
-            <div class="flex-grow-1">
-                <div class="quest-name">Spin the roulette wheel</div>
-                <div class="quest-sub">Rewards: 100 points · 0/1</div>
-                <div class="quest-bar mt-2">
-                <div class="quest-bar-fill" style="width: 0%"></div>
+            <!-- Title -->
+        <header class="container hero-pad py-4">
+            <div class="text-center mb-4">
+                <h2 class="text-uppercase mb-2">Daily Quests</h2>
+                <div class="fw-bold"><h1>Resets in: 12:54:12</h1></div>
+            </div>
+        </header>
+        <div class="p-4 panel">
+            <div class="row g-4 -items-stretch">
+            <div class="col-12 col-lg-5">
+                <div class="p-4 panel">
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+
+                        <div class="fw-bold">
+                            Daily Quest Board
+                        </div>
+                    </div>
+                    </div>
+                    <hr class="divider my-4">
+                    <!-- Daily Quests-->
+                    <div class="quest-wrap mt-4">
+                    <h6 class="quest-title mb-3">Daily Quests</h6>
+
+                    <!-- Quest 1 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Spin the roulette wheel</div>
+                            <div class="quest-sub">Rewards: 100 points · 0/1</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 100 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+
+                    <!-- Quest 2 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Bid for an item</div>
+                            <div class="quest-sub">Rewards: 150 points · 0/1</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 150 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+
+                    <!-- Quest 3 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Like 5 posts</div>
+                            <div class="quest-sub">Rewards: 200 points · 1/5</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 200 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="p-4 panel">
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+
+                        <div class="flex-grow-1">
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+
+                            <div class="fw-bold">
+                                Daily Quest Board
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="divider my-4">
+                    <!-- Daily Challenges-->
+                    <div class="quest-wrap mt-4">
+                    <h6 class="quest-title mb-3">Daily Quests</h6>
+
+                    <!-- Quest 1 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Spin the roulette wheel</div>
+                            <div class="quest-sub">Rewards: 100 points · 0/1</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 100 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+
+                    <!-- Quest 2 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Bid for an item</div>
+                            <div class="quest-sub">Rewards: 150 points · 0/1</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 150 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+
+                    <!-- Quest 3 -->
+                    <div class="quest-card">
+                        <div class="d-flex justify-content-between align-items-center gap-3">
+                        <div class="flex-grow-1">
+                            <div class="quest-name">Like 5 posts</div>
+                            <div class="quest-sub">Rewards: 200 points · 1/5</div>
+                            <div class="quest-bar mt-2">
+                            <div class="quest-bar-fill" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 200 Points" type="button">Claim</button>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
-            <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 100 Points" type="button">Claim</button>
             </div>
-        </div>
-
-        <!-- Quest 2 -->
-        <div class="quest-card">
-            <div class="d-flex justify-content-between align-items-center gap-3">
-            <div class="flex-grow-1">
-                <div class="quest-name">Bid for an item</div>
-                <div class="quest-sub">Rewards: 150 points · 0/1</div>
-                <div class="quest-bar mt-2">
-                <div class="quest-bar-fill" style="width: 0%"></div>
-                </div>
-            </div>
-            <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 150 Points" type="button">Claim</button>
-            </div>
-        </div>
-
-        <!-- Quest 3 -->
-        <div class="quest-card">
-            <div class="d-flex justify-content-between align-items-center gap-3">
-            <div class="flex-grow-1">
-                <div class="quest-name">Like 5 posts</div>
-                <div class="quest-sub">Rewards: 200 points · 1/5</div>
-                <div class="quest-bar mt-2">
-                <div class="quest-bar-fill" style="width: 20%"></div>
-                </div>
-            </div>
-            <button class="btn btn-sm quest-claim" data-message="congrats! you have earned 200 Points" type="button">Claim</button>
-            </div>
-        </div>
         </div>
     </main>
 
     <footer class="container pb-4 ">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-      <div class="small"> © Celestial Forge </div>
+      <div class="fw-bold">1 Day streak!</div>
     </footer>
 </body>
 </html> 
