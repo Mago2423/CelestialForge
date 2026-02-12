@@ -264,6 +264,7 @@ footer{
   background: rgba(255,209,102,0.08);
   color: var(--gold);
   white-space: nowrap;
+  text-align: center;
 }
 
 .quest-claim:hover{
@@ -279,3 +280,6 @@ footer{
     margin-top: 10px;
   }
 }
+  .quest-claim{
+  font-size: 15px;
+  }
