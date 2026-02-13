@@ -1,10 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".quest-claim");
+const popupModal = document.getElementById('popupModal');
 
-    buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            const message = button.dataset.message || "Quest claimed!";
-            alert(message);
-        });
-    });
+popupModal.addEventListener('show.bs.modal', event => {
+  const button = event.relatedTarget;
+
+  const title = button.getAttribute('data-title');
+  const content = button.getAttribute('data-content');
+
+  popupModal.querySelector('.modal-title').textContent =
+    title || '';
+
+  popupModal.querySelector('.modal-body').textContent =
+    content || 'No reward available.';
 });
