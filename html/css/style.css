@@ -344,7 +344,16 @@ footer{
   filter: brightness(1.2);
 }
 
+.search-input {
+      background-color: var(--bg);
+      color: var(--text);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
 
+.search-input::placeholder {
+      color: var(--muted);
+    }
 
 
 

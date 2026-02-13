@@ -42,11 +42,14 @@
   </nav>
     <main>
         <header>
-            <form action="">
-                <input class= "panel p-4 w-100" type="text" placeholder="Search..">
-            </form>
+            <div class="container py-2">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 search-input" type="search" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
             <!-- TOP SECTION NAV -->
-            <ul class="nav nav-pills justify-content-center my-3" id="sectionNav">
+            <ul class="nav nav-pills justify-content-center my-2" id="sectionNav">
             <li class="nav-item">
                 <button class="nav-link nav-fixed px-3 py-2 panel fw-semibold text-white" type="button" data-section="all">All</button>
             </li>
