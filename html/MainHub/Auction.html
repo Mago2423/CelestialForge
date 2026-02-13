@@ -42,8 +42,117 @@
   </nav>
     <main>
         <header>
-
+            <form action="">
+                <input class= "panel p-4 w-100" type="text" placeholder="Search..">
+            </form>
+            <!-- TOP SECTION NAV -->
+            <ul class="nav nav-pills justify-content-center my-3" id="sectionNav">
+            <li class="nav-item">
+                <button class="nav-link nav-fixed px-3 py-2 panel fw-semibold text-white" type="button" data-section="all">All</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link nav-fixed px-3 py-2 panel fw-semibold text-secondary" type="button" data-section="magic">Magic</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link nav-fixed px-3 py-2 panel fw-semibold text-secondary" type="button" data-section="Physical">Physical</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link nav-fixed px-3 py-2 panel fw-semibold text-secondary" type="button" data-section="artifacts">Artifacts</button>
+            </li>
+            </ul>
         </header>
+            <!-- SECTIONS -->
+            <div class="container">
+
+            <div class="content-section" id="all">
+                <h3>All items</h3>
+                <p>all items go here.</p>
+                <hr class="divider my-3">
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="panel p-4 h-100">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <img src="picture" alt="weapon" width="100" height="75">
+
+                                <div>
+                                    <h3 class="fw-bold fs-4">Shadowless Blade</h3>
+                                    <a class="btn btn-primary w-100" href="#">Details</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section d-none" id="magic">
+                <h3>Magic</h3>
+                <p>Magic items go here.</p>
+                <hr class="divider my-3">
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="panel p-4 h-100">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <img src="picture" alt="weapon" width="100" height="75">
+
+                                <div>
+                                    <h3 class="fw-bold fs-4">Shadowless Blade</h3>
+                                    <a class="btn btn-primary w-100" href="#">Details</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section d-none" id="Physical">
+                <h3>Physical</h3>
+                <p>Physical items go here.</p>
+                <hr class="divider my-3">
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="panel p-4 h-100">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <img src="picture" alt="weapon" width="100" height="75">
+
+                                <div>
+                                    <h3 class="fw-bold fs-4">Shadowless Blade</h3>
+                                    <a class="btn btn-primary w-100" href="#">Details</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section d-none" id="artifacts">
+                <h3>artifacts</h3>
+                <p>artifacts items go here.</p>
+                <hr class="divider my-3">
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="panel p-4 h-100">
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <img src="picture" alt="weapon" width="100" height="75">
+
+                                <div>
+                                    <h3 class="fw-bold fs-4">Shadowless Blade</h3>
+                                    <a class="btn btn-primary w-100" href="#">Details</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
 
     </main>
     <footer class="container pb-4">
@@ -51,6 +160,6 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../Javascript/Home.js"></script>
+    <script src="../Javascript/Auction.js"></script>
 </body>
 </html>
