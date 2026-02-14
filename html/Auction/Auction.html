@@ -133,6 +133,17 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co"; // replace with your Supabase URL
+      const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc"; // replace with your anon key
+      const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    </script>
+
+    
     <script src="../Javascript/Auction_Details.js"></script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  </body>
 </html>

@@ -4,64 +4,78 @@ document.addEventListener("DOMContentLoaded", () => {
   const pendingBidDisplay = document.getElementById("pendingBidDisplay");
   const bidHistoryList = document.getElementById("bidHistoryList");
 
-  // Read pending bid from localStorage (set by Auction page)
-    let tempPrice = Number(localStorage.getItem("pendingBid")) || 0;
-    document.getElementById("pendingBidDisplay").textContent = tempPrice;
+  // ===============================
+  // Read pending bid
+  // ===============================
+  const tempPrice = Number(localStorage.getItem("pendingBid")) || 0;
+  pendingBidDisplay.textContent = tempPrice;
 
-    confirmBidBtn.addEventListener("click", async (e) => {
-    e.preventDefault(); // Stop immediate navigation
+  // ===============================
+  // Confirm Bid
+  // ===============================
+  confirmBidBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
 
     const username = usernameInput.value.trim();
     if (!username) {
-        alert("Enter your username");
-        return;
+      alert("Enter your username");
+      return;
     }
 
     try {
-        // Send bid to API first
-        const res = await fetch("https://YOUR_API_URL_HERE", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user: username, amount: tempPrice })
-        });
+      const { error } = await supabaseClient
+        .from("bids")
+        .insert([{ user: username, amount: tempPrice }]);
 
-        const data = await res.json();
+      if (error) {
+        console.error(error);
+        alert("Insert failed: " + error.message);
+        return;
+      }
 
-        // Save the confirmed bid locally
-        localStorage.setItem("latestBidAmount", data.highestBid);
-        localStorage.setItem("latestBidUser", data.user);
+      // Save locally for Auction page
+      localStorage.setItem("latestBidAmount", tempPrice);
+      localStorage.setItem("latestBidUser", username);
+      localStorage.removeItem("pendingBid");
 
-        // Clear pending bid
-        localStorage.removeItem("pendingBid");
-
-        // Redirect to Auction page after successful API call
-        window.location.href = confirmBidBtn.href;
+      // Redirect AFTER success
+      window.location.href = "../Auction/Auction.html";
 
     } catch (err) {
-        console.error("Bid failed:", err);
-        alert("Failed to send bid. Try again.");
+      console.error(err);
+      alert("Failed to send bid.");
     }
-    });
+  });
 
+  // ===============================
+  // Load bid history
+  // ===============================
+  async function loadBidHistory() {
+    try {
+      const { data, error } = await supabaseClient
+        .from("bids")
+        .select("*")
+        .order("amount", { ascending: false })
+        .limit(10);
 
-  // 3️⃣ Optional: load bid history
-  function loadBidHistory() {
-    fetch("https://your-api.com/auction/history") // ✅ replace with API
-      .then(res => res.json())
-      .then(data => {
-        bidHistoryList.innerHTML = "";
-        data.forEach(bid => {
-          const li = document.createElement("li");
-          li.className = "list-group-item d-flex justify-content-between";
-          li.textContent = bid.user;
+      if (error) throw error;
 
-          const span = document.createElement("span");
-          span.textContent = `${bid.amount} Gold`;
-          li.appendChild(span);
+      bidHistoryList.innerHTML = "";
 
-          bidHistoryList.appendChild(li);
-        });
+      data.forEach(bid => {
+        const li = document.createElement("li");
+        li.className = "list-group-item d-flex justify-content-between";
+        li.textContent = bid.user;
+
+        const span = document.createElement("span");
+        span.textContent = `${bid.amount} Gold`;
+        li.appendChild(span);
+
+        bidHistoryList.appendChild(li);
       });
+    } catch (err) {
+      console.error("Failed to load bid history:", err);
+    }
   }
 
   loadBidHistory();
