@@ -360,6 +360,13 @@ footer{
       color: var(--muted);
     }
 
+/*bid history background colour*/
+#bidHistoryList li {
+  background-color: #1a1a1a; /* or your panel color */
+  color: white;              /* text color */
+  border: 1px solid #333;    /* optional border */
+}
+
 
 
 
