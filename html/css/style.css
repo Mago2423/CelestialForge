@@ -105,6 +105,11 @@ h1,h2,h3,h4,h5,.navbar-brand{
   box-shadow: var(--shadow);
 }
 
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
 /* Turn your two columns into gold-bordered “cards” */
 .hero-pad .col-12 > .p-4{
   border-radius: var(--radius);
