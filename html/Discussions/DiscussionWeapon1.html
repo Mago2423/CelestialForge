@@ -50,26 +50,27 @@
             <div class="text-center">
                 <h3>Shadowless Blade</h3>
             </div>
+            <hr class="divider">
         </header>
-        <div class="container p-4">
+        <div class="container panel p-4">
             <div class="row g-2">
-                <div class="col-2">
+                <div class="col-2 d-flex justify-content-center align-items-center">
                     <div class="avatar">🙂</div>
                 </div>
                 <div class="col-10">
                     <div class="row g-3">
-                        <div class="col-6">
+                        <div class="col-6 justify-content-center text-center">
                             <h4>John</h4>
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 text-end">
                             <p>2 Weeks ago</p>
                         </div>
                     </div>
                     <div class="row g-3">
-                        <div class="col-8 panel text-center px-3">
+                        <div class="col-4 panel text-center">
                             <h5>Appraiser</h5>
                         </div>
-                        <div class="col-4 panel text-center">
+                        <div class="col-2 panel text-center">
                             <h5>VIP</h5>
                         </div>
                     </div>
@@ -90,12 +91,169 @@
                     <h5>47</h5>
                 </div>
                 <div class="col-1">
-                    <button type="button"onclick="alert('Image Button clicked!')">
-                        <img src="picture"alt="comments" style="width: 50px; height: 50px;">
+                    <button type="button" class="btn p-0" data-bs-toggle="collapse" data-bs-target="#replyCollapse1">
+                        <img src="picture" alt="Reply" style="width: 50px; height: 50px;">
                     </button>
                 </div>
-                <div class="col-2">
-                    <h5>Reply</h5>
+                <!--reply button that collaps and opens up-->
+                    <div class="collapse mt-3" id="replyCollapse1">
+                        <div class="container card card-body panel">
+                            <div class="row g-2 panel">
+                                <div class="col-12">
+                                    <form>
+                                        <div class="form-group h-100px">
+                                            <input type="message" class="form-control" id="exampleInputMessage1" aria-describedby="message" placeholder="Enter Message">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-12 panel pb-4">
+                                    <div class="row">
+                                        <div class="col-1">
+                                            <img src="picture" alt="Bold" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-1">
+                                            <p class="dividerV"></p>
+                                        </div>
+                                        <div class="col-1">
+                                            <img src="picture" alt="Italics" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-1">
+                                            <p class="dividerV"></p>
+                                        </div>
+                                        <div class="col-1">
+                                            <img src="picture" alt="Underline" style="width: 50px; height: 50px;">
+                                        </div>
+                                        <div class="col-1">
+                                            <p class="dividerV"></p>
+                                        </div>
+                                        <div class="col-1">
+                                            <img src="picture" alt="File" style="width: 50px; height: 50px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-success px-5 w-100">
+                                        Post
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--replies-->
+        <div class="container panel p-4">
+            <div class="row g-2">
+                <div class="col-1 text-center">
+                    <p>Replies</p>
+                </div>
+                <div class="col-1">
+                    <p class="dividerV"></p>
+                </div>
+                <div class="col-10">
+                    <div class="row g-2">
+                        <div class="col-2 d-flex justify-content-center">
+                            <div class="avatar">🙂</div>
+                        </div>
+                        <div class="col-10">
+                            <div class="row g-3">
+                                <div class="col-6 text-center">
+                                    <h4>John</h4>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p>2 Weeks ago</p>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-4 panel text-center">
+                                    <h5>Appraiser</h5>
+                                </div>
+                                <div class="col-2 panel text-center">
+                                    <h5>VIP</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="m-1">
+                            <p>its all in or nothing, dont let others out gamble you</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <button type="button"onclick="alert('Image Button clicked!')">
+                                <img src="picture"alt="Like" style="width: 50px; height: 50px;">
+                            </button>
+                        </div>
+                        <div class="col-1 pl-5">
+                            <h5>47</h5>
+                        </div>
+                        <div class="col-1">
+                            <button
+                            type="button"
+                            class="btn p-0"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#replyCollapse2">
+                                <img src="picture" alt="Reply" style="width:50px;height:50px;">
+                            </button>
+                        </div>
+                            <div class="collapse mt-3" id="replyCollapse2">
+                                <div class="container card card-body panel">
+                                    <div class="row g-2 panel">
+                                        <div class="col-12">
+                                            <form>
+                                                <div class="form-group h-100px">
+                                                    <input type="message" class="form-control" id="exampleInputMessage1" aria-describedby="message" placeholder="Enter Message">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-12 panel pb-4">
+                                            <div class="row">
+                                                <div class="col-1">
+                                                    <img src="picture" alt="Bold" style="width: 50px; height: 50px;">
+                                                </div>
+                                                <div class="col-1">
+                                                    <p class="dividerV"></p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="picture" alt="Italics" style="width: 50px; height: 50px;">
+                                                </div>
+                                                <div class="col-1">
+                                                    <p class="dividerV"></p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="picture" alt="Underline" style="width: 50px; height: 50px;">
+                                                </div>
+                                                <div class="col-1">
+                                                    <p class="dividerV"></p>
+                                                </div>
+                                                <div class="col-1">
+                                                    <img src="picture" alt="File" style="width: 50px; height: 50px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   <div class="row mt-4">
+                                        <div class="col-12 d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-success px-5 w-100">
+                                                Post
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>

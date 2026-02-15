@@ -367,6 +367,11 @@ footer{
   border: 1px solid #333;    /* optional border */
 }
 
+.dividerV {
+  border-left: 2px solid #F1C94D;
+  height: 100%;
+  margin: 0 10px; /* horizontal spacing */
+}
 
 
 
