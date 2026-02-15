@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Celestial Forge · Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>Celestial Forge · Market</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container">
 
       <a class="navbar-brand fw-bold" href="../Main/Home.html">
@@ -40,214 +41,201 @@
       </div>
     </div>
   </nav>
-    <main class="hero-pad my-4">
 
-        <header class="text-center mb-5">
-            <hr class="divider">
-            <h2 class="text-uppercase">Market</h2>
-            <hr class="divider">
-        </header>
+<main class="hero-pad my-4">
 
-        <div class="panel p-4">
-            <div class="position-relative">
+  <!-- HEADER -->
+  <header class="text-center mb-5 container">
+    <hr class="divider">
+    <h2 class="text-uppercase">Daily shop</h2>
+    <hr class="divider">
+  </header>
 
-                <!-- OVERLAPPING FEATURED LABEL -->
-                <div class="position-absolute top-0 start-50 translate-middle
-                            panel px-4 py-2 bg-dark text-white z-3">
-                    Featured
-                </div>
+  <!-- FEATURED -->
+  <div class="container mb-5">
+    <div class="panel p-4 position-relative">
 
-                <!-- CONTENT -->
-                <div class="container mt-5">
-                    <div class="d-flex flex-column flex-md-row gap-3">
+      <div class="position-absolute top-0 start-50 translate-middle panel px-4 py-2 bg-dark text-white z-3">
+        Featured
+      </div>
 
-                        <!-- ITEM 1 -->
-                        <div class="flex-fill panel p-4 bg-dark text-white d-flex">
-                            <!-- IMAGE -->
-                            <div class="me-3">
-                                <h2>item</h2>
-                                <img src="img/item2.jpg" class="img-fluid rounded" alt="Item 1">
-                            </div>
+      <div class="container mt-5">
+        <div class="d-flex flex-column flex-md-row gap-3">
 
-                            <!-- DETAILS & BUTTON -->
-                            <div class="d-flex flex-column justify-content-between">
-                                <p>Details here</p>
-                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                                data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                                >Buy</button>
-                            </div>
-                        </div>
-
-                        <!-- ITEM 2 -->
-                        <div class="flex-fill panel p-4 bg-dark text-white d-flex">
-                            <!-- IMAGE -->
-                            <div class="me-3">
-                                <h2>item</h2>
-                                <img src="img/item2.jpg" class="img-fluid rounded" alt="Item 2">
-                            </div>
-
-                            <!-- DETAILS & BUTTON -->
-                            <div class="d-flex flex-column justify-content-between">
-                                <p>Details here</p>
-                                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                                data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                                >Buy</button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
+          <!-- ITEM 1 -->
+          <div class="flex-fill panel p-4 bg-dark text-white d-flex gap-3">
+            <div>
+              <h5>Item</h5>
+              <img src="../img/basicwand.webp" class="img-fluid rounded" alt="Basic Wand">
             </div>
+
+            <div class="d-flex flex-column justify-content-between flex-grow-1">
+              <p>Details here</p>
+              <button class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#dynamicModal"
+                data-title="Congrats!"
+                data-content="300 Gold has been spent! You have obtained:"
+                data-img="../img/basicwand.webp"
+                data-btn-title="Item Acquired!"
+                data-btn-text-content="You have acquired the weapon Basic Wand"
+                data-btn-img="../img/basicwand.webp">
+                Buy
+              </button>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="flex-fill panel p-4 bg-dark text-white d-flex gap-3">
+            <div>
+              <h5>Item</h5>
+              <img src="../img/goldsickel.webp" class="img-fluid rounded" alt="Gold Sickel">
+            </div>
+
+            <div class="d-flex flex-column justify-content-between flex-grow-1">
+              <p>Details here</p>
+              <button class="btn btn-primary w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#dynamicModal"
+                data-title="Congrats!"
+                data-content="500 Gold has been spent! You have obtained:"
+                data-img="../img/goldsickel.webp"
+                data-btn-title="Item Acquired!"
+                data-btn-text-content="You have acquired the weapon Gold Sickel"
+                data-btn-img="../img/goldsickel.webp">
+                Buy
+              </button>
+            </div>
+          </div>
+
         </div>
-    <div class="position-relative my-4">
-    <div class="position-absolute top-0 start-50 translate-middle
-                panel px-4 py-2 bg-dark text-white z-3">
-        Category
+      </div>
+    </div>
+  </div>
+
+  <!-- CATEGORY -->
+  <div class="container position-relative my-4">
+
+    <div class="position-absolute top-0 start-50 translate-middle panel px-4 py-2 bg-dark text-white z-3">
+      Category
     </div>
 
     <div class="panel p-4">
-        <!-- Carousel -->
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- Indicators -->
+      <!-- CAROUSEL -->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- INDICATORS -->
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
         </div>
 
-        <!-- Slides -->
+        <!-- SLIDES -->
         <div class="carousel-inner">
 
-            <!-- SLIDE 1 -->
-            <div class="carousel-item active">
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <div>
-                        <img src="img/item2.jpg" class="img-fluid rounded" alt="Item 1">
-                    <div>
-                    </div>
-                        <p>Details here</p>
-                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                        data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                        >Buy</button>
-                    </div>
-                </div>
-
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <div>
-                        <img src="img/item3.jpg" class="img-fluid rounded" alt="Item 2">
-                    </div>
-                    <div>
-                        <p>Details here</p>
-                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                        data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                        >Buy</button>
-                    </div>
-                </div>
-
-
-            </div>
-            </div>
-
-            <!-- SLIDE 2 -->
-            <div class="carousel-item">
+          <!-- SLIDE 1 -->
+          <div class="carousel-item active">
             <div class="d-flex flex-wrap justify-content-center gap-3">
 
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <div>
-                        <img src="img/item4.jpg" class="img-fluid rounded" alt="Item 3">
-                    </div>
-                    <div>
-                        <p>Details here</p>
-                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                        data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                        >Buy</button>
-                    </div>
-                </div>
+              <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
+                <img src="../img/simplesword.webp" class="img-fluid rounded mb-2">
+                <p>Details here</p>
+                <button class="btn btn-primary w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dynamicModal"
+                  data-title="Congrats!"
+                  data-content="100 gold has been spent! You have obtained:"
+                  data-img="../img/simplesword.webp"
+                  data-btn-title="Item Acquired!"
+                  data-btn-text-content="You have acquired the weapon Simple Sword"
+                  data-btn-img="../img/simplesword.webp">
+                  Buy
+                </button>
+              </div>
 
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <div>
-                        <img src="img/item5.jpg" class="img-fluid rounded" alt="Item 4">
-                    </div>
-                    <div>
-                        <p>Details here</p>
-                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                        data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                        >Buy</button>
-                    </div>
-                </div>
+              <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
+                <img src="../img/flamebow.jpg" class="img-fluid rounded mb-2">
+                <p>Details here</p>
+                <button class="btn btn-primary w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dynamicModal"
+                  data-title="Congrats!"
+                  data-content="500 gold has been spent! You have obtained:"
+                  data-img="../img/flamebow.jpg"
+                  data-btn-title="Item Acquired!"
+                  data-btn-text-content="You have acquired the weapon Flame Bow"
+                  data-btn-img="../img/flamebow.jpg">
+                  Buy
+                </button>
+              </div>
 
             </div>
-            </div>
+          </div>
 
-            <!-- SLIDE 3 -->
-            <div class="carousel-item">
+          <!-- SLIDE 2 -->
+          <div class="carousel-item">
             <div class="d-flex flex-wrap justify-content-center gap-3">
 
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <img src="img/item6.jpg" class="img-fluid rounded" alt="Item 5">
-                    <p>Details here</p>
-                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                    data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                    >Buy</button>
-                </div>
+              <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
+                <img src="../img/crystalstaff.png" class="img-fluid rounded mb-2">
+                <p>Details here</p>
+                <button class="btn btn-primary w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#dynamicModal"
+                  data-title="Congrats!"
+                  data-content="1000 gold has been spent! You have obtained:"
+                  data-img="../img/crystalstaff.png"
+                  data-btn-title="Item Acquired!"
+                  data-btn-text-content="You have acquired the weapon Crystal Staff"
+                  data-btn-img="../img/crystalstaff.png">
+                  Buy
+                </button>
+              </div>
 
-                <div class="panel p-3 col-10 col-sm-6 col-md-5 col-lg-3">
-                    <img src="img/item7.jpg" class="img-fluid rounded" alt="Item 6">
-                    <p>Details here</p>
-                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#dynamicModal" data-title="Congrats!" data-content="200 points has been spent! You have obtained:" data-img="https://via.placeholder.com/250/ff0000" data-btn-text="Claim"
-                    data-btn-img="https://via.placeholder.com/250/ff0000" data-btn-title="Item Aquired!" data-btn-text-content="You have Aquired the sticker 'Happy Boy'" data-btn-action="nested"
-                    data-show-close="false">Buy</button>
-                </div>
             </div>
-            </div>
+          </div>
 
         </div>
-        
-        <!-- Controls -->
+
+        <!-- CONTROLS -->
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-gold rounded-circle p-3" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-gold rounded-circle p-3" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+          <span class="carousel-control-next-icon"></span>
         </button>
-        </div>
+
+      </div>
     </div>
-    </main>
-    <footer class="container pb-4">
-        
+  </div>
+</main>
 
-    </footer>
+<!-- MODAL -->
+<div class="modal fade" id="dynamicModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content panel p-4">
 
-    <div class="modal fade" id="dynamicModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
-        <div class="modal-header panel p-4">
-            <h5 class="modal-title" id="modalTitle">Title Here</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      <div class="modal-body text-center">
+        <p id="modalText"></p>
+        <img id="modalImage" class="img-fluid mb-3">
+        <div class="d-flex justify-content-center gap-2">
+          <button id="claimBtn" class="btn btn-info">Claim</button>
+          <button id="closeBtn" class="btn btn-secondary" data-bs-dismiss="modal" style="display:none;">Close</button>
         </div>
+      </div>
 
-        <div class="modal-body text-center panel p-4">
-            <p id="modalText">Some text here</p>
-            <img src="" id="modalImage" class="img-fluid mb-3" alt="Modal Image">
-            <div class="d-flex justify-content-center gap-2">
-            <button id="claimBtn" class="btn btn-info">Claim</button>
-            <button id="closeBtn" class="btn btn-secondary" data-bs-dismiss="modal" style="display:none;">Close</button>
-            </div>
-        </div>
-
-        </div>
     </div>
-    </div>
+  </div>
+</div>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../Javascript/Market_DailyShop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../Javascript/Market_DailyShop.js"></script>
 </body>
 </html>
