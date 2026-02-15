@@ -1,70 +1,101 @@
-const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co";
-const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc";
+document.addEventListener("DOMContentLoaded", () => {
+  const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co"; 
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc";
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  // Make sure the library loaded
+  if (!window.supabase) {
+    console.error("Supabase library not loaded. Check the <script src='@supabase/supabase-js@2'> tag.");
+    return;
+  }
 
-// Select all posts
-const posts = document.querySelectorAll(".post");
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-posts.forEach(post => {
-  const postId = post.dataset.postId;
-  const form = post.querySelector(".replyForm");
-  const replyList = post.querySelector(".replyList");
+  // Select all posts that should have replies
+  const posts = document.querySelectorAll(".post");
 
-  // Load replies for this post on page load
-  loadReplies(postId, replyList);
+  if (!posts.length) {
+    console.warn("No elements found with class .post. Add class='post' to your post containers.");
+    return;
+  }
 
-  // Handle reply form submit
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  posts.forEach((post) => {
+    const postId = post.dataset.postId; // data-post-id="1" -> dataset.postId === "1"
+    const form = post.querySelector(".replyForm");
+    const replyList = post.querySelector(".replyList");
 
-    const username = form.querySelector('input[name="username"]').value.trim();
-    const message = form.querySelector('textarea[name="message"]').value.trim();
-
-    if (!username || !message) {
-      alert("Please enter username and message!");
+    // Skip if structure missing (prevents null errors)
+    if (!postId || !form || !replyList) {
+      console.warn("Skipping a post because it is missing data-post-id, .replyForm, or .replyList", post);
       return;
     }
 
-    console.log(`Posting reply to post ${postId}:`, { username, message });
+    // Load replies on start
+    loadReplies(supabase, postId, replyList);
 
-    const { data, error } = await supabase
-      .from("replies")
-      .insert([{ user: username, message: message, post_id: postId }])
-      .select(); // return the inserted row
+    // Submit handler
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    if (error) {
-      console.error("Insert error:", error.message);
-      alert("Failed to post: " + error.message);
-      return;
-    }
+      const usernameEl = form.querySelector('input[name="username"]');
+      const messageEl = form.querySelector('textarea[name="message"]');
 
-    console.log("Insert successful:", data);
+      const username = usernameEl?.value.trim();
+      const message = messageEl?.value.trim();
 
-    form.reset();
-    loadReplies(postId, replyList);
+      if (!username || !message) {
+        alert("Please enter username and message!");
+        return;
+      }
+
+      // Insert into Supabase
+      const { data, error } = await supabase
+        .from("replies")
+        .insert([{ user: username, message: message, post_id: Number(postId) }])
+        .select();
+
+      if (error) {
+        console.error("Insert error full object:", error);
+        alert("Failed to post: " + (error.message || "Unknown error"));
+        return;
+      }
+
+      console.log("Insert successful:", data);
+
+      form.reset();
+      loadReplies(supabase, postId, replyList);
+    });
   });
 });
 
-// Function to load replies for a specific post
-async function loadReplies(postId, replyListContainer) {
+// Fetch + render replies
+async function loadReplies(supabase, postId, replyListContainer) {
   const { data, error } = await supabase
     .from("replies")
-    .select("*")
-    .eq("post_id", postId)
+    .select("id, user, message, post_id")
+    .eq("post_id", Number(postId))
     .order("id", { ascending: true });
 
   if (error) {
-    console.error("Fetch error:", error.message);
+    console.error("Fetch error full object:", error);
     return;
   }
 
   replyListContainer.innerHTML = "";
 
-  data.forEach(reply => {
+  data.forEach((reply) => {
     const div = document.createElement("div");
     div.className = "panel p-3 mb-2";
-    div.innerHTML = `<strong>${reply.user}</strong><p class="mb-1">${reply.message}</p>`;
+    div.innerHTML = `<strong>${escapeHtml(reply.user)}</strong><p class="mb-1">${escapeHtml(reply.message)}</p>`;
     replyListContainer.appendChild(div);
   });
+}
+
+// Basic HTML escaping (prevents someone injecting HTML into your page)
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
