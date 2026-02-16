@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ CHANGE THIS if needed
   const MIN_INCREMENT = 10000;
 
+  const TABLE_NAME = (confirmBidBtn?.dataset?.table || "bids").trim();
+
   // Pending bid from Auction page
   const tempPrice = Number(localStorage.getItem("pendingBid")) || 0;
   pendingBidDisplay.textContent = tempPrice;
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Helper: get current highest bid from DB
   async function getHighestBid() {
     const { data, error } = await supabaseClient
-      .from("bids")
+      .from(TABLE_NAME)
       .select("amount,user")
       .order("amount", { ascending: false })
       .limit(1);
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // ✅ Insert bid
       const { error } = await supabaseClient
-        .from("bids")
+        .from(TABLE_NAME)
         .insert([{ user: username, amount: tempPrice }]);
 
       if (error) {
@@ -80,7 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.removeItem("pendingBid");
 
       // Redirect after success
-      window.location.href = "../Auction/Auction.html";
+      if (TABLE_NAME=="bid") {
+        window.location.href = "../Auction/Auction.html";
+      }
+      else{
+        window.location.href = "../Auction/Auction2.html";
+      }
+      
     } catch (err) {
       console.error(err);
       alert("Failed to send bid. Check console for details.");
@@ -95,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadBidHistory() {
     try {
       const { data, error } = await supabaseClient
-        .from("bids")
+        .from(TABLE_NAME)
         .select("*")
         .order("amount", { ascending: false })
         .limit(10);
