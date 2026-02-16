@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
       else if (TABLE_NAME=="bid2") {
         window.location.href = "../Auction/Auction2.html";
       }
-      else {
+      else {TABLE_NAME=="bid3"
         window.location.href = "../Auction/Auction3.html";
       }
       
