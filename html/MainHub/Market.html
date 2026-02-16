@@ -11,35 +11,46 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container">
 
-      <a class="navbar-brand fw-bold" href="../Main/Home.html">
-        CELESTIAL FORGE
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Navigation bar, Same for all pages-->
 
-      <div id="nav" class="collapse navbar-collapse">
-        <div class="ms-auto d-flex align-items-center">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark "> 
+        <!-- Turns this <nav> into a navigation bar using bootstrap, makes it expand on large screens and collaspe on small screens. sets the background to dark as well as adjusting text colors to fit the theme.  -->
+        <div class="container">
+            <!-- Centers the content and adds horizontal padding -->
+        <a class="navbar-brand fw-bold" href="../Main/Home.html">
+            <!-- styles the name and logo, makes the text bolded-->
+            CELESTIAL FORGE
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <!-- Adds mobile menu buttons-->
+            <span class="navbar-toggler-icon"></span>
+            <!-- Adds the 3 lines for when switching to mobile to collapse it -->
+        </button>
 
-          <a class="btn" href="../Main/MainHub.html">
-              Main Hub
-          </a>
+            <div id="nav" class="collapse navbar-collapse">
+            <!-- Collapses the navigation bar on mobile -->
+                <div class="ms-auto d-flex align-items-center">
+                    <!-- Makes a flex box and pushes all the items to the right (margin start auto), centers all the items in the flex row-->
+                    <a class="btn" href="../Main/MainHub.html"> <!-- class btn just turns all the following into buttons -->
+                        Main Hub
+                    </a>
 
-          <a class="btn nav-active" href="../Main/Home.html">
-            Home
-          </a>
+                    <a class="btn nav-active" href="../Main/Home.html">
+                        Home
+                    </a>
 
-          <a class="btn" href="../Main/Profile.html">
-              Market
-          </a>
+                    <a class="btn" href="../Main/Profile.html">
+                        Market
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </nav>
+    </nav>
+
+    <!-- Main part  -->
+
     <main class="hero-pad my-4">
 
         <header class="text-center mb-5">
