@@ -399,22 +399,24 @@ footer{
   overflow: hidden;
 }
 
+
 .gold-frame {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: 3px solid var(--gold);
+  display: inline-block; 
+  border: 3px solid gold;
   border-radius: 16px;
   overflow: hidden;
-  background: var(--black);
+  background: #000;
+  max-width: 400px;
+  width: 90%;  
 }
 
 .gold-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 80%; 
+  height: auto; 
   display: block;
-  border-radius: inherit;
+  margin: 0 auto;  
 }
+
 
 /* Mobile tweaks */
 @media (max-width: 576px){
