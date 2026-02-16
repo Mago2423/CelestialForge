@@ -1,46 +1,46 @@
 # Celestial Forge
+Overview
 
+Celestial Forge is a web-based interactive platform designed to demonstrate modern front-end and backend integration through a clean, responsive interface and real-time database interaction. The project allows users to submit messages, view reply history, and interact with shared data that is securely stored and retrieved from a backend service.
 
-Celestial Forge
-
-Celestial Forge is a web-based interactive platform that allows users to participate in community discussions and interactive features such as posting messages, viewing reply history, and engaging with dynamic data stored in a backend database.
-
-The project focuses on combining a clean user interface with real-time data handling using a modern backend service. It demonstrates how frontend technologies work together with APIs to create a functional, user-driven website. This project is designed both as a learning experience and as a foundation for more advanced web features in the future.
+This project serves both as a functional community-style message board and as a learning-focused full-stack web application. By combining HTML, CSS, JavaScript, and a backend API, Celestial Forge showcases how dynamic, user-driven websites can be built with real-time data handling, validation, and security policies. The platform is designed to be simple to use while remaining scalable for future feature expansion.
 
 Design Process
 Target Audience
 
-This website is designed for users who want a simple, interactive platform where they can:
+Celestial Forge is designed for users who want a straightforward, interactive web platform where they can:
 
 Submit messages or replies
 
-View message history in real time
+View previously posted messages in real time
 
 Interact with shared data stored securely online
 
-The interface is intentionally minimal and intuitive so that first-time users can understand how to use the site without instructions.
+The interface is intentionally minimal and intuitive, ensuring that first-time users can understand and use the website without the need for instructions.
 
 User Goals
 
+Users of Celestial Forge want to:
+
 Easily submit a username and message
 
-See previously posted messages without refreshing the page
+View existing messages without refreshing the page
 
-Interact with dynamic content stored in a database
+Interact with dynamic content retrieved from a database
 
-Use the website across different screen sizes and browsers
+Access the website across multiple devices and screen sizes
 
 Why This Project Works
 
-Celestial Forge meets these goals by:
+Celestial Forge helps users achieve these goals by:
 
-Using clear UI elements and layout structure
+Using clear UI components and a structured layout
 
 Connecting directly to a backend API for data storage and retrieval
 
-Updating content dynamically using JavaScript
+Updating page content dynamically using JavaScript
 
-Enforcing data rules and security through backend policies
+Enforcing data integrity and security using backend validation and Row Level Security
 
 User Stories
 
@@ -48,40 +48,42 @@ As a visitor, I want to enter a username so that my messages are identifiable.
 
 As a user, I want to submit a message so that I can participate in the discussion.
 
-As a user, I want to see previous replies so that I understand the conversation history.
+As a user, I want to view previous replies so that I can understand the conversation history.
 
-As a user, I want the interface to work on both desktop and mobile devices.
+As a user, I want the site to work on both desktop and mobile devices so that I can use it anywhere.
 
 Wireframes / Mockups
 
-Wireframes were designed before development to plan layout and user flow.
+Wireframes were created before development to plan layout, user flow, and interface structure.
 
-Adobe XD wireframes are included in a separate folder in the project directory (or via shared XD link if applicable).
+Adobe XD wireframes are included in a dedicated folder within the project directory
+
+(Alternatively, an Adobe XD share URL can be provided if required)
 
 Features
 Existing Features
 
-Username Input – allows users to identify themselves before posting.
+Username Input – allows users to identify themselves before posting messages
 
-Message Submission Form – allows users to send messages to the database.
+Message Submission Form – allows users to submit messages to the backend database
 
-Replies History Panel – displays previously submitted messages from the API.
+Replies History Panel – displays previously submitted messages retrieved via the API
 
-Dynamic Updates – content updates without page reloads using JavaScript.
+Dynamic Content Updates – updates content without page reloads using JavaScript
 
-Backend Validation – database rules ensure valid data is stored.
+Backend Validation & Security – enforces valid data entry through backend rules and policies
 
 Features Left to Implement
 
-User authentication (login/logout)
+User authentication (login and logout)
 
 Message editing and deletion
 
-Pagination or load-more for long message histories
+Pagination or “load more” functionality for long message histories
 
 User profile pages
 
-Real-time updates using subscriptions
+Real-time updates using database subscriptions
 
 Technologies Used
 
@@ -92,67 +94,81 @@ CSS3 / Bootstrap 5
 Used for layout, styling, responsiveness, and UI components.
 
 JavaScript (Vanilla JS)
-Used to handle user interactions, API calls, and dynamic DOM updates.
+Used to handle user interactions, API requests, and dynamic DOM updates.
 
 Supabase
-Used as the backend service to store data, manage APIs, and enforce Row Level Security policies.
+Used as the backend service for data storage, API access, and Row Level Security (RLS).
 
 Git & GitHub
 Used for version control and project management.
 
 Assistive AI
 
-AI tools were used during the development of this project to assist with debugging, learning, and feature implementation.
+AI tools were used during the development of this project to assist with debugging, learning, and implementing features. The use of AI tools has been documented as required.
 
 ChatGPT
+
 ChatGPT was used to:
 
-Debug JavaScript issues related to API calls
+Debug JavaScript and API-related issues
 
-Help integrate Supabase with frontend JavaScript
+Assist with integrating Supabase into frontend JavaScript
 
-Explain Row Level Security (RLS) errors and fixes
+Explain and resolve Row Level Security (RLS) errors
 
-Refactor and improve existing code structure
-Screenshots of AI-generated code and explanations are included as evidence.
+Refactor and improve code structure and readability
 
-(Other AI tools were not used unless explicitly stated.)
+Screenshots of AI-generated code, explanations, and debugging assistance are included as evidence.
+
+GitHub Copilot
+
+GitHub Copilot was used to:
+
+Assist with writing boilerplate JavaScript and HTML
+
+Suggest function structures and logic during development
+
+Speed up repetitive coding tasks while maintaining developer oversight
+
+All AI-generated code was reviewed, modified, and validated by the developer before use.
 
 Testing
 Manual Testing Scenarios
-
 Message Submission Form
 
 Navigate to the main page
 
-Try submitting the form with empty inputs
-→ Verify that submission fails or shows an error
+Submit the form with empty inputs
+
+Verify that submission fails or an error occurs
 
 Enter a username but no message
-→ Verify that submission is blocked
 
-Enter both username and message
-→ Verify that the message appears in the replies history
+Verify that submission is blocked
+
+Enter both a username and message
+
+Verify that the message appears in the replies history
 
 Replies History
 
-Refresh the page and verify that previous messages load correctly
+Refresh the page and verify that previously submitted messages load correctly
 
-Confirm messages are retrieved from the database
+Confirm messages are retrieved from the backend database
 
 Browser & Screen Testing
 
-Tested on Chrome and Edge
+Tested on Chrome and Microsoft Edge
 
-Tested on desktop and smaller screen sizes using browser dev tools
+Tested on desktop and smaller screen sizes using browser developer tools
 
-Layout remains usable and readable on different screen widths
+Layout remains usable and readable across different screen widths
 
 Known Bugs / Issues
 
-Occasional styling inconsistencies depending on screen size
+Minor styling inconsistencies on certain screen sizes
 
-Error handling messages could be improved for better user feedback
+Error feedback messages could be improved for clearer user guidance
 
 Credits
 Content
@@ -161,16 +177,19 @@ All written content was created by the developer unless otherwise stated.
 
 Media
 
-No external images were used, or images were self-created / royalty-free.
+No external images were used. Any visuals are self-created or royalty-free.
 
 Acknowledgements
 
-Inspiration for this project came from learning modern full-stack web development concepts.
+Inspiration came from learning modern full-stack web development concepts
 
-Special thanks to online documentation and learning resources for Supabase and Bootstrap.
+Documentation and tutorials for Supabase and Bootstrap
 
-Assistance and guidance provided by ChatGPT during development and debugging.
+Guidance and debugging assistance provided by ChatGPT
 
+Development support and code suggestions provided by GitHub Copilot
 
+Repository
 
-github:https://github.com/Mago2423/CelestialForge
+GitHub Repository:
+https://github.com/Mago2423/CelestialForge

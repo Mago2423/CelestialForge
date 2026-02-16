@@ -2,9 +2,15 @@
 <!-- User stats, weapon collection, profile settings, and navigation to profile sections -->
 <!doctype html>
 <html lang="en">
+
+<!-- ===== HEAD ===== -->
+<!-- Document head section containing metadata and stylesheet references -->
 <head>
+  <!-- UTF-8 character encoding: Standard character set for web pages -->
   <meta charset="utf-8">
-  <title>Celestial Forge · Home</title>
+  <!-- Page title: Text displayed in browser tab and search engines -->
+  <title>Celestial Forge · Profile</title>
+  <!-- Viewport meta tag: Ensures page is responsive on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS: Responsive layouts and components -->
@@ -59,12 +65,12 @@
   </nav>
 
 <!-- ===== MAIN CONTENT ===== -->
-
+<!-- Main profile page container with vertical and horizontal margins -->
 <main class="container my-5">
 
   <!-- ===== PAGE HEADER ===== -->
-  <!-- .text-center for centered text, .mb-5 for bottom margin, .divider for decorative lines, .text-uppercase for uppercase title, .fw-bold and .fs-4 for bold and large font. -->
-  <header class="text-center mb-5">
+  <!-- Header section with top and bottom dividers, centered alignment, and large bottom margin -->
+  <header class=\"text-center mb-5\">
     <hr class="divider">
     <h2 class="text-uppercase">Profile</h2>
     <hr class="divider">
@@ -75,15 +81,21 @@
   <div class="row g-2">
 
     <div class="row g-4 ">
-      <!-- ===== LEFT COLUMN: PROFILE PANEL ===== -->
-      <!-- .col-lg-6 for half width on large screens, full width on mobile. .panel and .p-4 for custom panel and padding. -->
+      <!-- ===== LEFT COLUMN: USER PROFILE PANEL ===== -->
+      <!-- Main profile information display with avatar, username, level, VIP status, and XP progress -->
       <div class="col-lg-6">
           <div class="panel p-4">
-          <!-- .d-flex, .align-items-center, .gap-3, .mb-4: Flexbox for avatar/name/notification, spaced and aligned. -->
+          
+          <!-- ===== AVATAR AND USER IDENTITY ===== -->
+          <!-- Flexbox container for horizontal avatar and user info layout -->
           <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- User avatar image with fixed 50x50 pixel dimensions -->
               <div class="avatar"><img src="../pictures/thanatos-removebg-preview.png" alt="weapon" width="50" height="50"></div>
+              <!-- User name and status text in flex column layout -->
               <div>
+              <!-- Username displayed with bold text and large font size -->
               <div class="fw-bold fs-4">Thanatos</div>
+              <!-- User status or tagline in smaller text -->
               <div class="small">Sleepy</div>
               </div>
               <div class="ms-auto">
