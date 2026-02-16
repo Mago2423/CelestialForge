@@ -23,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// ===== GET TABLE NAME FROM SCRIPT DATA ATTRIBUTE =====
+// Read the table name from the data-table attribute on the script tag before DOMContentLoaded
+const scriptTag = document.currentScript;
+const TABLE_NAME = (scriptTag?.dataset?.table || "bids").trim();
+
 document.addEventListener("DOMContentLoaded", () => {
   const plusBtn = document.getElementById("plusBtn");
   const minusBtn = document.getElementById("minusBtn");
@@ -45,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchCurrentHighestBid() {
     try {
       const { data, error } = await supabaseClient
-        .from("bids")
+        .from(TABLE_NAME)
         .select("amount,user")
         .order("amount", { ascending: false })
         .limit(1);
@@ -74,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadBidHistory() {
     try {
       const { data, error } = await supabaseClient
-        .from("bids")
+        .from(TABLE_NAME)
         .select("*")
         .order("amount", { ascending: false })
         .limit(10);
