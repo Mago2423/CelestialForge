@@ -1,228 +1,311 @@
 <!doctype html>
 <html lang="en">
 
-<!-- ===== HEAD ===== -->
-<!-- Document head section containing metadata and stylesheet references -->
+<!-- ===== HEAD SECTION ===== -->
+<!-- Contains metadata, page title, and stylesheet links for the Auction detail page -->
 <head>
-    <!-- UTF-8 character encoding: Standard character set for web pages -->
+    <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
     <meta charset="utf-8">
-    <!-- Page title: Text displayed in browser tab and search engines -->
-    <title>Celestial Forge · Auction</title>
-    <!-- Viewport meta tag: Ensures page is responsive on mobile devices -->
+    <!-- Page title: Text displayed in browser tab and used by search engines -->
+    <title>Celestial Forge · Home</title>
+    <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS framework: Provides responsive grid and components -->
+    <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts: Cinzel font family for typography -->
+    <!-- Google Fonts import: Cinzel font family for elegant typography and headings -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Normalize CSS: Ensures consistent styling across browsers -->
+    <!-- Normalize CSS stylesheet: Ensures consistent default styling across different web browsers -->
     <link rel="stylesheet" href="../css/normalize.css">
-    <!-- Custom stylesheet: Project-specific styles -->
+    <!-- Custom project stylesheet: Contains all project-specific styling and design elements -->
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
-    <!-- ===== NAVIGATION ===== -->
-    <!-- Bootstrap navigation bar with responsive design -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <!-- Navigation container with centered content -->
-    <div class="container">
 
-      <!-- Logo and branding -->
-      <a class="navbar-brand fw-bold" href="../../index.html">
-        CELESTIAL FORGE
-      </a>
-      
-      <!-- Mobile menu toggle button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <!-- Hamburger menu icon -->
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- ===== NAVIGATION BAR ===== -->
+<!-- Bootstrap navigation bar with dark theme, expanded layout on large screens, and responsive menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
+  <div class="container">
 
-      <!-- Collapsible navigation menu -->
-      <div id="nav" class="collapse navbar-collapse">
-        <!-- Flexbox container pushing items right -->
-        <div class="ms-auto d-flex align-items-center">
+    <!-- Logo and branding text displayed in bold on left side of navbar -->
+    <a class="navbar-brand fw-bold" href="../../index.html">
+      CELESTIAL FORGE
+    </a>
+    
+    <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <!-- Navigation link to Main Hub -->
-          <a class="btn" href="../Main/MainHub.html">
-              Main Hub
-          </a>
+    <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
+    <div id="nav" class="collapse navbar-collapse">
+      <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
+      <div class="ms-auto d-flex align-items-center">
 
-          <!-- Navigation link to Home page (currently active) -->
-          <a class="btn nav-active" href="../../index.html">
-            Home
-          </a>
+        <!-- Navigation link to Main Hub page -->
+        <a class="btn" href="../Main/MainHub.html">
+            Main Hub
+        </a>
 
-          <!-- Navigation link to Profile page -->
-          <a class="btn" href="../Main/Profile.html">
-              Profile
-          </a>
-        </div>
+        <!-- Navigation link to Home page marked as currently active section -->
+        <a class="btn nav-active" href="../../index.html">
+          Home
+        </a>
+
+        <!-- Navigation link to Profile page -->
+        <a class="btn" href="../Main/Profile.html">
+            Profile
+        </a>
       </div>
     </div>
-  </nav>
-    <!-- ===== MAIN CONTENT ===== -->
-    <!-- Main content area -->
-    <main>
-        <header class="text-center mb-5">
-            <h2 class="text-uppercase">Auction</h2>
-            <hr class="divider mx-auto">
-        </header>
-        <div class="container mt-5">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-12"> <!-- card wider on large screens -->
-              <div class="item-card panel p-3">
-                <div class="row align-items-center gx-4"> <!-- add horizontal gap -->
-                  <!-- Left Column -->
-                  <div class="col-12 col-lg-7 text-center">
-                    <h2 class="fs-4 fs-md-3">Cosmic wand</h2>
-                    <div class="gold-frame mx-auto text-center" style="max-width: 100%;">
-                      <img src="../pictures/3dwand-removebg-preview.png" alt="Cosmic wand" class="img-fluid">
-                    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN CONTENT SECTION ===== -->
+<!-- Main content area displaying auction item details, bidding information, and related content -->
+<main>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <!-- Header section with centered text alignment and decorative divider -->
+  <header class="text-center mb-5">
+    <!-- Page heading displayed in uppercase -->
+    <h2 class="text-uppercase">Auction</h2>
+    <!-- Decorative horizontal divider line with auto horizontal margins -->
+    <hr class="divider mx-auto">
+  </header>
+
+  <!-- ===== ITEM DISPLAY SECTION ===== -->
+  <!-- Container with top margin spacing for auction item details -->
+  <div class="container mt-5">
+    <!-- Grid row with vertical gap between items and centered layout -->
+    <div class="row gy-4 justify-content-center">
+      <!-- Single column taking full width on mobile and centered on large screens -->
+      <div class="col-12">
+        <!-- Custom item card container with padding -->
+        <div class="item-card panel p-3">
+          <!-- Grid row with vertical centering and horizontal gap between columns -->
+          <div class="row align-items-center gx-4">
+
+            <!-- ===== LEFT COLUMN: ITEM IMAGE AND NAME ===== -->
+            <!-- Column for item display: full width on mobile, 7 units on large screens -->
+            <div class="col-12 col-lg-7 text-center">
+              <!-- Item name with responsive font sizing -->
+              <h2 class="fs-4 fs-md-3">Cosmic wand</h2>
+              <!-- Golden frame border around the item image with centered alignment and responsive max-width -->
+              <div class="gold-frame mx-auto text-center" style="max-width: 100%;">
+                <!-- Responsive item image that scales with container -->
+                <img src="../pictures/3dwand-removebg-preview.png" alt="Cosmic wand" class="img-fluid">
+              </div>
+            </div>
+
+            <!-- ===== RIGHT COLUMN: AUCTION DETAILS AND BIDDING ===== -->
+            <!-- Column for bidding and interaction: full width on mobile, 5 units on large screens -->
+            <div class="col-12 col-lg-5">
+
+              <!-- ===== ITEM DESCRIPTION PANEL ===== -->
+              <!-- Panel with padding and centered content for item description -->
+              <div class="panel p-4 mb-4 justify-content-center">
+                <!-- Item description text -->
+                <p>Measures the time of the universe and is the indicator of the time until the next big bang</p>
+              </div>
+
+              <!-- ===== ACTION BUTTONS PANEL ===== -->
+              <!-- Panel containing creator and details view buttons -->
+              <div class="panel p-4 mb-4">
+                <!-- Grid row with horizontal gap for button layout -->
+                <div class="row gx-2">
+                  <!-- Button column (2/3 width): Creator information button -->
+                  <div class="col-8">
+                    <!-- Creator button for viewing creator profile -->
+                    <h3 class="btn btn-primary w-100">Creator</h3>
                   </div>
-
-                  <!-- Right Column -->
-                  <div class="col-12 col-lg-5">
-                    <div class="panel p-4 mb-4 justify-content-center">
-                      <p>Measures the time of the universe and is the indicator of the time until the next big bang</p>
-                    </div>
-
-                    <!-- Creator / View Details Buttons -->
-                    <div class="panel p-4 mb-4">
-                      <div class="row gx-2">
-                        <div class="col-8">
-                          <h3 class="btn btn-primary w-100">Creator</h3>
-                        </div>
-                        <div class="col-4">
-                          <a class="btn btn-primary w-100" href="../Auction/Details.html">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- 3D Model -->
-                    <div class="panel p-4 mb-4 justify-content-center text-center">
-                      <div class="sketchfab-embed-wrapper mx-auto" style="max-width: 100%;">
-                        <iframe title="Wand" 
-                                frameborder="0" 
-                                allowfullscreen 
-                                mozallowfullscreen="true" 
-                                webkitallowfullscreen="true" 
-                                allow="autoplay; fullscreen; xr-spatial-tracking" 
-                                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
-                                src="https://sketchfab.com/models/635c2d678c5c4d2da0ef273aae289bb0/embed" 
-                                class="img-fluid" style="width: 100%; height: auto;">
-                        </iframe>
-                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                          <a href="https://sketchfab.com/3d-models/wand-635c2d678c5c4d2da0ef273aae289bb0" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Wand </a> 
-                          by 
-                          <a href="https://sketchfab.com/Mago2543" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Mago2543 </a> 
-                          on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div> <!-- end right column -->
-                </div> <!-- end row -->
-              </div> <!-- end item-card -->
-            </div> <!-- end col-12 -->
-          </div> <!-- end row -->
-        </div> <!-- end container -->
-
-
-        <!-- Auction details -->
-        <div class="pt-4 mb-4 justify-content-center text-center">
-          <h3>Auction details</h3>
-          <div class="container">
-            <div class="row g-1 mb-4 align-items-center">
-              <div class="col-3">
-                <div class="panel text-center">
-                  <h4>Time</h4>
+                  <!-- Button column (1/3 width): Details view button -->
+                  <div class="col-4">
+                    <!-- Link button to detailed item page -->
+                    <a class="btn btn-primary w-100" href="../Auction/Details.html">View Details</a>
+                  </div>
                 </div>
               </div>
-              <div class="col-1 d-flex justify-content-center align-items-center">
-                <!-- Lottie animation replacing the old time image -->
-                <dotlottie-wc
-                  src="https://lottie.host/d9ad92e7-23d1-465a-a626-2a2c07c64226/OOcbKBABRi.lottie"
-                  style="width:100px; height:100px;"
-                  autoplay
-                  loop
-                ></dotlottie-wc>
-              </div>
-              <div class="col-8">
-                <div class="panel text-center">
-                  <h5>3 Days 9 Hours 17 Mins 43 Secs</h5>
+
+              <!-- ===== 3D MODEL VIEWER PANEL ===== -->
+              <!-- Panel containing embedded 3D model viewer with padding and centered alignment -->
+              <div class="panel p-4 mb-4 justify-content-center text-center">
+                <!-- 3D model embed wrapper with responsive sizing -->
+                <div class="sketchfab-embed-wrapper mx-auto" style="max-width: 100%;">
+                  <!-- Embedded Sketchfab 3D model iframe with full configuration -->
+                  <iframe title="Wand" 
+                          frameborder="0" 
+                          allowfullscreen 
+                          mozallowfullscreen="true" 
+                          webkitallowfullscreen="true" 
+                          allow="autoplay; fullscreen; xr-spatial-tracking" 
+                          xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
+                          src="https://sketchfab.com/models/635c2d678c5c4d2da0ef273aae289bb0/embed" 
+                          class="img-fluid" style="width: 100%; height: auto;">
+                  </iframe>
+                  <!-- Sketchfab model attribution and link with custom styling -->
+                  <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                    <a href="https://sketchfab.com/3d-models/wand-635c2d678c5c4d2da0ef273aae289bb0" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Wand </a> 
+                    by 
+                    <a href="https://sketchfab.com/Mago2543" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> Mago2543 </a> 
+                    on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                  </p>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
-
-        <!-- Load the Lottie Web Component script ONCE -->
-        <script
-          src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
-          type="module"
-        ></script>
-
-
-
-        <!--API-->
-      <div class="panel p-4 mb-4">
-        <h4>Current Highest Bid: 
-          <span id="currentBidText">Loading...</span>
-        </h4>
       </div>
+    </div>
+  </div>
 
-      <div class="d-flex justify-content-center align-items-center mb-3">
-        <div class="d-flex align-items-center gap-2">
-          <button id="minusBtn" class="btn btn-danger">−</button>
-          <input type="text" id="priceDisplay" class="form-control text-center price-display panel text-white" readonly>
-          <button id="plusBtn" class="btn btn-success">+</button>
+  <!-- ===== AUCTION DETAILS SECTION ===== -->
+  <!-- Section displaying auction timing and status information with centered alignment -->
+  <div class="pt-4 mb-4 justify-content-center text-center">
+    <!-- Section heading -->
+    <h3>Auction details</h3>
+    <!-- Container for auction detail items -->
+    <div class="container">
+      <!-- Grid row with minimal vertical gap and centered item alignment -->
+      <div class="row g-1 mb-4 align-items-center">
+        <!-- Column 1 (3/12 width): "Time" label -->
+        <div class="col-3">
+          <!-- Panel with centered text for time label -->
+          <div class="panel text-center">
+            <h4>Time</h4>
+          </div>
+        </div>
+        <!-- Column 2 (1/12 width): Time animation icon -->
+        <div class="col-1 d-flex justify-content-center align-items-center">
+          <!-- Lottie animation replacing the old time image -->
+          <dotlottie-wc
+            src="https://lottie.host/d9ad92e7-23d1-465a-a626-2a2c07c64226/OOcbKBABRi.lottie"
+            style="width:100px; height:100px;"
+            autoplay
+            loop
+          ></dotlottie-wc>
+        </div>
+        <!-- Column 3 (8/12 width): Remaining auction time display -->
+        <div class="col-8">
+          <!-- Panel with centered text displaying remaining time -->
+          <div class="panel text-center">
+            <h5>3 Days 9 Hours 17 Mins 43 Secs</h5>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <a id="bidBtn" href="../Auction/Bid.html" class="btn btn-outline-light w-100 mb-4">Bid</a>
+  <!-- ===== LOTTIE WEB COMPONENT SCRIPT ===== -->
+  <!-- Load the Lottie Web Component script ONCE for animations -->
+  <script
+    src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+    type="module"
+  ></script>
 
-      <div class="panel p-3 mt-4 text-center">
-        <h5>Bid History</h5>
-        <ul id="bidHistoryList" class="list-group w-50 mx-auto mt-2 panel"></ul>
-      </div>
+  <!-- ===== CURRENT BID DISPLAY ===== -->
+  <!-- Panel showing the current highest bid information from API -->
+  <div class="panel p-4 mb-4">
+    <!-- Heading with current bid amount that updates dynamically via JavaScript -->
+    <h4>Current Highest Bid: 
+      <span id="currentBidText">Loading...</span>
+    </h4>
+  </div>
 
-    </main>
-    <footer>
-      <div class=" justify-content-center text-center">
-            <a class="btn btn-primary mx-4 w-45" href="../Discussions/DiscussionWeapon1.html">Discussion</a>
-            <a class="btn btn-primary mx-4 w-45" href="../Auction/Review.html">Reviews</a>
-            <a class="btn btn-primary mx-4 w-45" href="../Auction/Auction.html">Auction</a>
-            <hr class="divider mx-auto">
-        </div>
-    </footer>
-    <script
-      src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
-      type="module"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-      const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co"; // replace with your Supabase URL
-      const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc"; // replace with your anon key
-      const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    </script>
+  <!-- ===== BID INPUT SECTION ===== -->
+  <!-- Container for bid amount adjustment controls with centered alignment -->
+  <div class="d-flex justify-content-center align-items-center mb-3">
+    <!-- Flexbox container for bid control buttons and input -->
+    <div class="d-flex align-items-center gap-2">
+      <!-- Minus button for decreasing bid amount -->
+      <button id="minusBtn" class="btn btn-danger">−</button>
+      <!-- Read-only input field displaying current bid amount -->
+      <input type="text" id="priceDisplay" class="form-control text-center price-display panel text-white" readonly>
+      <!-- Plus button for increasing bid amount -->
+      <button id="plusBtn" class="btn btn-success">+</button>
+    </div>
+  </div>
 
-    
-    <script src="../Javascript/Auction_Details.js" data-table="bids"></script>
+  <!-- ===== SUBMIT BID BUTTON ===== -->
+  <!-- Full-width button linking to bid confirmation page -->
+  <a id="bidBtn" href="../Auction/Bid.html" class="btn btn-outline-light w-100 mb-4">Bid</a>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script>
-      const timeAnim = lottie.loadAnimation({
-        container: document.getElementById('timeAnimation'), // the container
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '../animations/time.json' // path to your Lottie JSON file
-      });
-    </script>
-    
+  <!-- ===== BID HISTORY SECTION ===== -->
+  <!-- Panel displaying list of all previous bids on this item -->
+  <div class="panel p-3 mt-4 text-center">
+    <!-- Section heading -->
+    <h5>Bid History</h5>
+    <!-- Unordered list for displaying bid history items with Bootstrap list styling -->
+    <ul id="bidHistoryList" class="list-group w-50 mx-auto mt-2 panel"></ul>
+  </div>
 
-  </body>
+</main>
+
+<!-- ===== FOOTER SECTION ===== -->
+<!-- Footer with links to related pages -->
+<footer>
+  <!-- Footer content container with centered text alignment -->
+  <div class=" justify-content-center text-center">
+    <!-- Link to weapon discussion page -->
+    <a class="btn btn-primary mx-4 w-45" href="../Discussions/DiscussionWeapon1.html">Discussion</a>
+    <!-- Link to product reviews page -->
+    <a class="btn btn-primary mx-4 w-45" href="../Auction/Review.html">Reviews</a>
+    <!-- Link back to auction page -->
+    <a class="btn btn-primary mx-4 w-45" href="../Auction/Auction.html">Auction</a>
+    <!-- Decorative horizontal divider -->
+    <hr class="divider mx-auto">
+  </div>
+</footer>
+
+<!-- ===== LOTTIE ANIMATION SCRIPT ===== -->
+<!-- Load the Lottie Web Component library for animation support -->
+<script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js"
+  type="module"
+></script>
+
+<!-- ===== BOOTSTRAP JAVASCRIPT ===== -->
+<!-- Bootstrap JavaScript: Powers responsive components and interactive elements -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ===== SUPABASE DATABASE CLIENT ===== -->
+<!-- Supabase JavaScript library for backend database interactions and data retrieval -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- ===== SUPABASE CONFIGURATION ===== -->
+<!-- Initialize Supabase client with project credentials for database access -->
+<script>
+  
+  const SUPABASE_URL = "https://cbricgiqjcfkreigcuxk.supabase.co";
+  const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNicmljZ2lxamNma3JlaWdjdXhrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEwNzIzNTksImV4cCI6MjA4NjY0ODM1OX0.vWIrfG85DCVKXVjJcxY40nOcmdgXUZDA48eEM-KFntc";
+  const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+</script>
+
+<!-- ===== AUCTION DETAILS SCRIPT ===== -->
+<!-- JavaScript file handling auction item details, bid management, and API interactions -->
+<script src="../Javascript/Auction_Details.js" data-table="bids"></script>
+
+<!-- ===== SUPABASE DATABASE CLIENT ===== -->
+<!-- Supabase JavaScript library (loaded again for compatibility) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- ===== LOTTIE TIME ANIMATION ===== -->
+<!-- Initialize Lottie animation for time display element (alternative method) -->
+<script>
+  <!-- Load Lottie animation from JSON file for time indicator visualization -->
+  const timeAnim = lottie.loadAnimation({
+    container: document.getElementById('timeAnimation'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: '../animations/time.json'
+  });
+</script>
+
+</body>
 </html>
 

@@ -1,22 +1,24 @@
 <!doctype html>
 <html lang="en">
 
-<!-- ===== HEAD ===== -->
-<!-- Document head section containing metadata and stylesheet references for page configuration -->
+<!-- ===== HEAD SECTION ===== -->
+<!-- Contains metadata, page title, and stylesheet links for the Home page -->
 <head>
+  <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
   <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
   <meta charset="utf-8">
   <!-- Page title: Text displayed in browser tab and used by search engines -->
+  <!-- Page title: Text displayed in browser tab and used by search engines -->
   <title>Celestial Forge · Home</title>
+  <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
   <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
+  <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Google Fonts import: Cinzel font family for elegant typography and headings -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
-
   <!-- Normalize CSS stylesheet: Ensures consistent default styling across different web browsers -->
   <link rel="stylesheet" href="html/css/normalize.css">
   <!-- Custom project stylesheet: Contains all project-specific styling and design elements -->
@@ -25,28 +27,37 @@
 
 <body>
 
-<!-- ===== NAVIGATION ===== -->
+<!-- ===== NAVIGATION BAR ===== -->
 <!-- Bootstrap navigation bar with dark theme, expanded layout on large screens, and responsive menu -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
+  <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
   <div class="container">
+    <!-- Logo and branding text displayed in bold on left side of navbar -->
     <!-- Logo and branding text displayed in bold on left side of navbar -->
     <a class="navbar-brand fw-bold" href="index.html">CELESTIAL FORGE</a>
 
     <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
+    <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
       <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
+    <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
     <div id="nav" class="collapse navbar-collapse">
+      <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
       <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
       <div class="ms-auto d-flex align-items-center gap-2">
         <!-- Navigation link to Main Hub page -->
+        <!-- Navigation link to Main Hub page -->
         <a class="btn" href="html/Main/MainHub.html">Main Hub</a>
         <!-- Navigation link to Home page marked as currently active section -->
+        <!-- Navigation link to Home page marked as currently active section -->
         <a class="btn nav-active" href="index.html">Home</a>
+        <!-- Navigation link to Profile page -->
         <!-- Navigation link to Profile page -->
         <a class="btn" href="html/Main/Profile.html">Profile</a>
       </div>
@@ -54,92 +65,98 @@
   </div>
 </nav>
 
-<!-- ===== MAIN CONTENT ===== -->
-<!-- Main content area with custom padding and vertical margins -->
+<!-- ===== MAIN CONTENT SECTION ===== -->
+<!-- Main content area containing header, user profile information, quests, and quick access menu -->
 <main>
 
-  <!-- ===== HEADER SECTION ===== -->
-  <!-- Header section with centered text alignment and decorative dividers -->
+  <!-- ===== PAGE HEADER SECTION ===== -->
+  <!-- Header containing hero padding, centered text alignment, and large margins for visual separation -->
   <header class="container hero-pad py-4 text-center">
     <!-- Decorative horizontal divider line above title -->
+    <!-- Decorative horizontal divider line above title -->
     <hr class="divider">
-    <!-- Welcome message displayed in uppercase for visual emphasis -->
+    <!-- Welcome message with uppercase styling and responsive margin -->
     <h2 class="text-uppercase mb-2">Welcome To The Forge</h2>
-    <!-- Player username displayed in bold as main heading -->
+    <!-- User username displayed prominently with bold font weight -->
     <h1 class="fw-bold">USER [Thanatos]</h1>
+    <!-- Decorative horizontal divider line below title -->
     <!-- Decorative horizontal divider line below title -->
     <hr class="divider">
   </header>
 
-  <!-- ===== MAIN LAYOUT CONTAINER ===== -->
-  <!-- Two-column responsive layout with padding and gap spacing between columns -->
+  <!-- ===== MAIN GRID CONTAINER ===== -->
+  <!-- Container with horizontal padding and grid layout that stretches items to equal height -->
   <div class="container p-4">
-    <!-- Row container with vertical spacing and auto-height alignment for equal column heights -->
+    <!-- Grid row with vertical gap between columns and items stretched to full height -->
     <div class="row g-4 align-items-stretch">
 
-      <!-- ===== LEFT PANEL: USER PROFILE & DAILY QUESTS ===== -->
-      <!-- Left column: Takes full width on mobile, 5 columns on large screens -->
+      <!-- ===== LEFT PANEL: USER PROFILE AND DAILY QUESTS ===== -->
+      <!-- Column that takes full width on mobile and 5 units (41.67%) on large screens -->
       <div class="col-12 col-lg-5">
-        <!-- Panel container with padding and full height to match right column -->
+        <!-- Custom panel container with padding and full height to align with right panel -->
         <div class="panel p-4 h-100">
 
-          <!-- User profile info section with avatar, username, level, and VIP status -->
+          <!-- ===== USER INFO SECTION ===== -->
+          <!-- Flexbox container for horizontal layout with avatar, username, level, VIP status, and XP bar -->
           <div class="d-flex align-items-center gap-3 flex-wrap">
-            <!-- Avatar container for user profile image -->
+            <!-- Avatar container with user profile image -->
             <div class="avatar">
               <!-- User profile image with fixed dimensions -->
               <img src="html/img/thanatos.png" alt="avatar" width="50" height="50">
             </div>
 
-            <!-- User information section with flexible growth to fill available space -->
+            <!-- Flex container for user information (username, level, VIP, XP) that grows to fill available space -->
             <div class="flex-grow-1">
-              <!-- Level and VIP status displayed side by side -->
+              <!-- Row container with user level on left and VIP status on right -->
               <div class="d-flex justify-content-between align-items-center">
-                <!-- User level number displayed on left -->
+                <!-- User level badge with bold font -->
                 <div class="fw-bold">LVL 15</div>
-                <!-- VIP status indicator displayed on right with warning color -->
+                <!-- VIP status badge with bold font and warning color -->
                 <div class="fw-bold text-warning">VIP</div>
               </div>
 
-              <!-- Experience bar showing progress to next level -->
+              <!-- ===== XP PROGRESS BAR ===== -->
+              <!-- Visual progress indicator for experience points with percentage-based width -->
               <div class="xp mt-2">
-                <!-- Filled portion of XP bar with width percentage for current progress -->
+                <!-- Inner bar showing current progress (35% filled) -->
                 <div class="xp-progress" style="width:35%"></div>
               </div>
 
-              <!-- Motivational message below XP bar -->
+              <!-- Mission/goal description text displayed at reduced font size -->
               <div class="small mt-2">
                 Continue forging legendary weapons and earn rewards.
               </div>
             </div>
           </div>
 
-          <!-- Visual separator between profile info and quests section -->
+          <!-- Decorative horizontal divider separating user info from daily quests -->
           <hr class="divider my-4">
 
           <!-- ===== DAILY QUESTS SECTION ===== -->
-          <!-- Container for all daily quest cards -->
+          <!-- Container wrapper for quest display with custom styling -->
           <div class="quest-wrap">
+            <!-- Section heading for daily quests -->
             <!-- Section heading for daily quests -->
             <h6 class="quest-title mb-3">Daily Quests</h6>
 
-            <!-- Individual quest card: Buy 2 Weapons -->
+            <!-- ===== FIRST QUEST: BUY 2 WEAPONS ===== -->
+            <!-- Individual quest card displaying quest name, rewards, progress, and claim button -->
             <div class="quest-card">
-              <!-- Flexbox layout placing quest info on left and claim button on right -->
+              <!-- Flexbox layout for quest content with space-between spacing -->
               <div class="d-flex justify-content-between align-items-center gap-3">
-                <!-- Quest info section that expands to fill available space -->
+                <!-- Left column containing quest name, rewards, and progress bar -->
                 <div class="flex-grow-1">
-                  <!-- Quest task name -->
+                  <!-- Quest name text -->
                   <div class="quest-name">Buy 2 Weapon</div>
-                  <!-- Quest rewards and progress displayed as subtext -->
+                  <!-- Quest reward info (points) and progress (0/2) in secondary text style -->
                   <div class="quest-sub">Rewards: 100 points · 0/2</div>
-                  <!-- Progress bar for quest completion -->
+                  <!-- Visual progress bar showing quest completion percentage (0%) -->
                   <div class="quest-bar mt-2">
-                    <!-- Filled portion of progress bar based on completion percentage -->
+                    <!-- Inner bar showing current progress -->
                     <div class="quest-bar-fill" style="width:0%"></div>
                   </div>
                 </div>
-                <!-- Claim button with quest reward data for modal popup -->
+                <!-- Claim button with data attributes for modal functionality -->
                 <button class="btn btn-primary claim-btn"
                         data-title="Congrats!"
                         data-content="You have earned 100 points">
@@ -148,23 +165,24 @@
               </div>
             </div>
 
-            <!-- Individual quest card: Bid for an item (Complete - 100% progress) -->
+            <!-- ===== SECOND QUEST: BID FOR AN ITEM ===== -->
+            <!-- Quest card for bidding activity with 100% completion -->
             <div class="quest-card">
-              <!-- Flexbox layout placing quest info on left and claim button on right -->
+              <!-- Flexbox layout for quest content -->
               <div class="d-flex justify-content-between align-items-center gap-3">
-                <!-- Quest info section that expands to fill available space -->
+                <!-- Left column with quest details -->
                 <div class="flex-grow-1">
-                  <!-- Quest task name -->
+                  <!-- Quest name -->
                   <div class="quest-name">Bid for an item</div>
-                  <!-- Quest rewards and progress displayed as subtext -->
+                  <!-- Rewards and completion ratio (1/1 = complete) -->
                   <div class="quest-sub">Rewards: 150 points · 1/1</div>
-                  <!-- Progress bar for quest completion -->
+                  <!-- Visual progress bar at 100% -->
                   <div class="quest-bar mt-2">
                     <!-- Filled portion of progress bar showing 100% completion -->
                     <div class="quest-bar-fill" style="width:100%"></div>
                   </div>
                 </div>
-                <!-- Claim button with quest reward data for modal popup -->
+                <!-- Claim button for completed quest -->
                 <button class="btn btn-primary claim-btn"
                         data-title="Congrats!"
                         data-content="You have earned 150 points">
@@ -173,23 +191,24 @@
               </div>
             </div>
 
-            <!-- Individual quest card: Like 5 posts (In progress - 20% completion) -->
+            <!-- ===== THIRD QUEST: LIKE 5 POSTS ===== -->
+            <!-- Quest card for engagement activity with partial completion -->
             <div class="quest-card">
-              <!-- Flexbox layout placing quest info on left and claim button on right -->
+              <!-- Flexbox layout for quest content -->
               <div class="d-flex justify-content-between align-items-center gap-3">
-                <!-- Quest info section that expands to fill available space -->
+                <!-- Left column with quest information -->
                 <div class="flex-grow-1">
-                  <!-- Quest task name -->
+                  <!-- Quest name -->
                   <div class="quest-name">Like 5 posts</div>
-                  <!-- Quest rewards and progress displayed as subtext -->
+                  <!-- Rewards and progress (1/5 = 20% complete) -->
                   <div class="quest-sub">Rewards: 200 points · 1/5</div>
-                  <!-- Progress bar for quest completion -->
+                  <!-- Visual progress bar at 20% completion -->
                   <div class="quest-bar mt-2">
                     <!-- Filled portion of progress bar showing 20% completion -->
                     <div class="quest-bar-fill" style="width:20%"></div>
                   </div>
                 </div>
-                <!-- Claim button with quest reward data for modal popup -->
+                <!-- Claim button (inactive until quest is complete) -->
                 <button class="btn btn-primary claim-btn"
                         data-title="Congrats!"
                         data-content="You have earned 200 points">
@@ -203,40 +222,42 @@
       </div>
 
       <!-- ===== RIGHT PANEL: QUICK ACCESS MENU ===== -->
-      <!-- Right column: Takes full width on mobile, 7 columns on large screens -->
+      <!-- Column that takes full width on mobile and 7 units (58.33%) on large screens -->
       <div class="col-12 col-lg-7">
-        <!-- Panel container with padding and full height to match left column -->
+        <!-- Custom panel container with padding and full height alignment -->
         <div class="panel p-4 h-100">
+          <!-- Section heading for quick access menu -->
           <!-- Section heading for quick access menu -->
           <h5 class="mb-3">Quick Access</h5>
 
-          <!-- Grid layout for menu buttons with equal spacing and responsive design -->
+          <!-- ===== MENU BUTTON GRID ===== -->
+          <!-- Grid layout with 3-unit gap spacing vertically between menu buttons -->
           <div class="d-grid gap-3">
-            <!-- Main Hub menu button linking to marketplace and auctions section -->
+            <!-- Link to Main Hub page with descriptive subtitle -->
             <a class="btn btn-lg menu-btn text-start" href="html/Main/MainHub.html">
               Main Hub
-              <!-- Description text displayed below button label -->
+              <!-- Subtext describing page content -->
               <div class="small">Marketplace, auctions, featured weapons</div>
             </a>
 
-            <!-- Daily Quests menu button linking to quests and challenges section -->
+            <!-- Link to Quests page with descriptive subtitle -->
             <a class="btn btn-lg menu-btn text-start" href="html/MainHub/DailyQuests.html">
               Quests
-              <!-- Description text displayed below button label -->
+              <!-- Subtext describing page content -->
               <div class="small">Challenges to earn points & badges</div>
             </a>
 
-            <!-- Profile menu button linking to user account and settings -->
+            <!-- Link to Profile page with descriptive subtitle -->
             <a class="btn btn-lg menu-btn text-start" href="html/Main/Profile.html">
               Profile
-              <!-- Description text displayed below button label -->
+              <!-- Subtext describing page content -->
               <div class="small">Account info, level, settings</div>
             </a>
 
-            <!-- Contact menu button linking to support and feedback section -->
+            <!-- Link to Contact page with descriptive subtitle -->
             <a class="btn btn-lg menu-btn text-start" href="html/Home/Contact.html">
               Contact
-              <!-- Description text displayed below button label -->
+              <!-- Subtext describing page content -->
               <div class="small">Support, feedback, help</div>
             </a>
           </div>
@@ -247,40 +268,42 @@
   </div>
 </main>
 
-<!-- ===== FOOTER ===== -->
-<!-- Footer section with copyright information -->
+<!-- ===== FOOTER SECTION ===== -->
+<!-- Footer area with copyright information and site credit -->
 <footer class="container pb-4">
-  <!-- Flexbox layout for footer content alignment -->
+  <!-- Flexbox container that spreads copyright info across footer width -->
   <div class="d-flex justify-content-between align-items-center">
-    <!-- Copyright notice for Celestial Forge -->
+    <!-- Copyright text displayed in smaller font -->
     <div class="small">© Celestial Forge</div>
   </div>
 </footer>
 
-<!-- ===== MODAL POPUP ===== -->
-<!-- Bootstrap modal dialog for displaying quest completion rewards and confirmations -->
+<!-- ===== CLAIM REWARD MODAL ===== -->
+<!-- Modal dialog for displaying quest reward information when user claims a quest -->
 <div class="modal fade" id="popupModal" tabindex="-1">
-  <!-- Modal dialog container centered on screen -->
+  <!-- Modal dialog container with centered vertical positioning -->
   <div class="modal-dialog modal-dialog-centered">
-    <!-- Modal content with panel styling, padding, and white text color -->
+    <!-- Modal content area with custom panel styling and padding -->
     <div class="modal-content panel p-4 text-white">
       <!-- Modal header with title and close button -->
+      <!-- Modal header with title and close button -->
       <div class="modal-header">
-        <!-- Modal title section that gets populated dynamically by JavaScript -->
+        <!-- Dynamic title that updates based on quest claimed -->
         <h5 class="modal-title"></h5>
+        <!-- Close button for dismissing the modal -->
         <!-- Close button for dismissing the modal -->
         <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <!-- Modal body section that gets populated dynamically by JavaScript -->
+      <!-- Modal body containing reward message text -->
       <div class="modal-body"></div>
     </div>
   </div>
 </div>
 
 <!-- ===== SCRIPTS ===== -->
-<!-- Bootstrap JavaScript library: Enables interactive components like modals, carousels, dropdowns -->
+<!-- Bootstrap JavaScript: Powers navbar, modals, and interactive components -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Custom script for handling daily quests interactions and modal popups -->
+<!-- Home page functionality: Handles quest interactions, modal displays, and daily quest logic -->
 <script src="html/Javascript/Home_DailyQuests.js"></script>
 
 </body>

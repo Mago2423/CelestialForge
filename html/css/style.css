@@ -1,113 +1,152 @@
-/* ===== Celestial Forge Website Theme (matches your current HTML) ===== */
+/* ===== CELESTIAL FORGE CUSTOM CSS STYLESHEET ===== */
+/* Main styling for dark fantasy RPG theme with gold accents and semi-transparent panels */
+/* Uses CSS custom properties (variables) for consistent theming across the entire site */
+
+/* ===== ROOT VARIABLES: GLOBAL COLOR AND STYLING SYSTEM ===== */
+/* These CSS variables control the entire color scheme, spacing, typography, and shadows */
+/* All colors use dark purples/blacks with gold accents for fantasy RPG aesthetic */
+/* Semi-transparent panels create depth and layering effects without full opacity */
 
 :root{
-  --bg: #0b0b10;
-  --bg-2: #10101a;
+  /* Background gradients: dark gradient from top to bottom for depth effect */
+  --bg: #0b0b10;        /* Main dark purple-black base color */
+  --bg-2: #10101a;      /* Slightly lighter secondary background for gradient */
 
-  --panel: rgba(18,18,26,0.92);
-  --panel-2: rgba(23,23,38,0.92);
+  /* Semi-transparent panel colors for layered card/container styling */
+  --panel: rgba(18,18,26,0.92);      /* Primary panel background with high opacity */
+  --panel-2: rgba(23,23,38,0.92);    /* Secondary panel for gradient backgrounds */
 
-  --gold: #ffd166;
-  --text: #e9e6f2;
-  --muted: rgba(233,230,242,0.72);
+  /* Gold accent system: primary gold color used for highlights, borders, text */
+  --gold: #ffd166;      /* Bright gold for headers, links, important elements */
+  
+  /* Text colors: primary and muted variants for hierarchy */
+  --text: #e9e6f2;      /* Primary text color - light purple-white for readability */
+  --muted: rgba(233,230,242,0.72);   /* Muted text for secondary information */
 
-  --border: #F1C94D;
+  /* Borders: gold border color for panel outlines and dividers */
+  --border: #F1C94D;    /* Matches gold for cohesive gold-frame borders */
 
+  /* Shadows: consistent drop shadow for depth and elevation */
   --shadow: 0 12px 30px rgba(0,0,0,0.45);
 
-  --radius: 16px;
-  --radius-sm: 12px;
+  /* Border radius: standardized roundness for consistent aesthetic */
+  --radius: 16px;       /* Large radius for main panels and cards */
+  --radius-sm: 12px;    /* Small radius for buttons and minor elements */
 
-  --title-font: "Cinzel", serif;
+  /* Typography: fantasy RPG aesthetic with serif titlefont */
+  --title-font: "Cinzel", serif;    /* Elegant serif for headings - medieval feel */
 
-  /* Added color variables */
-  --panel-soft: rgba(18,18,26,0.55);
-  --panel-soft-2: rgba(23,23,38,0.75);
-  --panel-soft-3: rgba(18,18,26,0.70);
-  --panel-soft-4: rgba(12,12,18,0.50);
-  --panel-soft-5: rgba(12,12,18,0.55);
+  /* Semi-transparent panel variations: different opacity levels for visual layering */
+  --panel-soft: rgba(18,18,26,0.55);      /* Lower opacity for subtle backgrounds */
+  --panel-soft-2: rgba(23,23,38,0.75);    /* Medium-high opacity for balance */
+  --panel-soft-3: rgba(18,18,26,0.70);    /* Medium opacity - used for navbar */
+  --panel-soft-4: rgba(12,12,18,0.50);    /* Very transparent for light overlays */
+  --panel-soft-5: rgba(12,12,18,0.55);    /* Slightly opaque for card backgrounds */
 
-  --gold-soft: rgba(255,209,102,0.08);
-  --gold-soft-2: rgba(255,209,102,0.14);
+  /* Gold transparency variations: for subtle gold highlights and accents */
+  --gold-soft: rgba(255,209,102,0.08);    /* Very subtle gold tint for backgrounds */
+  --gold-soft-2: rgba(255,209,102,0.14);  /* Slightly stronger gold highlight */
 
-  --white-soft: rgba(255,255,255,0.06);
-  --white-soft-2: rgba(255,255,255,0.07);
+  /* White transparency: for subtle white overlays and dividers */
+  --white-soft: rgba(255,255,255,0.06);   /* Very faint white for borders */
+  --white-soft-2: rgba(255,255,255,0.07); /* Almost transparent white divider */
 
-  --success: #49c276;
-  --black: #000;
-  --panel-dark: #1a1a1a;
-  --border-dark: #333;
+  /* Utility colors: success (green for progress), black, and darker panel variants */
+  --success: #49c276;   /* Green for progress bars, XP gains, positive indicators */
+  --black: #000;        /* Pure black for solid elements */
+  --panel-dark: #1a1a1a;    /* Darker panel for bid history and list items */
+  --border-dark: #333;      /* Darker border for reduced contrast areas */
 }
 
+
+/* ===== BODY AND MAIN LAYOUT STYLING ===== */
+/* Sets the overall page appearance with gradient background and text color defaults */
+
 body{
+  /* Premium gradient background: Creates depth by transitioning from darker at top to slightly lighter at bottom */
   background:
     linear-gradient(180deg, var(--bg), var(--bg-2));
-  color: var(--text);
+  color: var(--text);   /* All text inherits light purple-white color variable */
 }
 
 main{
+  /* Content padding: Adds horizontal spacing to prevent text from touching browser edges */
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* Make Cinzel control the "fantasy UI" vibe */
+/* ===== TYPOGRAPHY: HEADINGS AND TITLE STYLING ===== */
+/* Applies consistent fantasy RPG aesthetic with Cinzel serif font and letter spacing */
+/* Creates visual hierarchy and medieval fantasy feel for all heading levels */
+
 h1,h2,h3,h4,h5,.navbar-brand{
-  font-family: var(--title-font);
-  letter-spacing: 0.6px;
+  font-family: var(--title-font);       /* Cinzel serif creates elegant, fantasy aesthetic */
+  letter-spacing: 0.6px;                /* Spreads letters for luxury/fantasy feel */
 }
 
-/* ===== Navbar ===== */
+/* ===== NAVBAR STYLING: STICKY HEADER NAVIGATION ===== */
+/* Main navigation bar with fixed position at top, semi-transparent background, blur effect */
+/* Provides site branding and navigation links with gold accent styling */
+
 .navbar{
-  position: sticky;
+  position: sticky;                     /* Sticks to top while scrolling - stays visible */
   top: 0;
-  z-index: 50;
-  padding: 14px 0;
-  backdrop-filter: blur(10px);
-  background: var(--panel-soft-3);
-  border-bottom: 1px solid var(--border);
+  z-index: 50;                          /* High stacking order to stay above other content */
+  padding: 14px 0;                      /* Vertical padding for comfortable click targets */
+  backdrop-filter: blur(10px);          /* Frosted glass effect on navbar background */
+  background: var(--panel-soft-3);      /* Semi-transparent panel color under blur */
+  border-bottom: 1px solid var(--border); /* Gold border separates navbar from content */
 }
 
 .navbar .navbar-brand{
-  color: var(--gold);
-  font-weight: 700;
-  text-transform: uppercase;
+  color: var(--gold);                   /* Logo text in bright gold for brand identity */
+  font-weight: 700;                     /* Bold weight for visual prominence */
+  text-transform: uppercase;            /* CELESTIAL FORGE in all caps */
 }
 
 .navbar .navbar-brand:hover{
-  color: var(--gold);
+  color: var(--gold);                   /* Keeps gold color on hover - no color change */
 }
 
 #nav .btn{
-  margin-left: 10px;
+  margin-left: 10px;                    /* Spacing between navigation buttons */
 }
 
 .nav-active{
-  border-color: var(--gold);
-  background: var(--gold-soft-2);
-  color: var(--gold);
+  /* Styling for currently active navigation link to show which page user is on */
+  border-color: var(--gold);            /* Gold border highlights the active link */
+  background: var(--gold-soft-2);       /* Subtle gold background tint */
+  color: var(--gold);                   /* Text turns gold to match theme */
 }
 
-/* ===== Buttons (override Bootstrap) ===== */
+/* ===== BUTTON STYLING: OVERRIDE BOOTSTRAP DEFAULTS ===== */
+/* Custom button styling with gold borders, semi-transparent backgrounds, smooth transitions */
+/* Includes hover and active states for interactive feedback and visual polish */
+
 .btn{
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--panel-soft);
-  color: var(--text);
-  transition: transform .15s ease, border-color .15s ease, background .15s ease;
+  border-radius: 999px;                 /* Fully rounded pill-shaped buttons */
+  border: 1px solid var(--border);      /* Gold border for visual definition */
+  background: var(--panel-soft);        /* Semi-transparent background blend with page */
+  color: var(--text);                   /* Text in primary light color */
+  transition: transform .15s ease, border-color .15s ease, background .15s ease; /* Smooth animations */
 }
 
 .btn:hover{
-  transform: translateY(-1px);
-  border-color: var(--border);
-  background: var(--panel-soft-2);
-  color: var(--text);
+  /* Hover state: Slightly lift button and enhance visibility */
+  transform: translateY(-1px);          /* Subtle upward movement for depth effect */
+  border-color: var(--border);          /* Keep gold border visible */
+  background: var(--panel-soft-2);      /* Slightly more opaque background on hover */
+  color: var(--text);                   /* Maintain text color */
 }
 
 .btn:active{
-  transform: translateY(0px);
+  /* Click state: Button returns to normal position */
+  transform: translateY(0px);           /* No lift - pressed down state */
 }
 
-/* ===== Hero / Panels ===== */
+/* ===== HERO PANELS: CARD CONTAINERS AND LAYOUT ===== */
+/* Main content card styling with gradient backgrounds, gold borders, and drop shadows */
+/* Creates premium card-like appearance for sections like hero, profile info, and quest cards */
 .hero-pad{
   padding-top: 26px;
 }
@@ -124,329 +163,401 @@ a{
   color:inherit;
 }
 
-/* Turn your two columns into gold-bordered “cards” */
+/* Hero section columns styled as premium cards */
 .hero-pad .col-12 > .p-4{
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, var(--panel-2), var(--panel));
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  height: 100%;
+  /* Column cards in hero section get same premium styling as main panels */
+  border-radius: var(--radius);         /* 16px rounded corners */
+  background: linear-gradient(180deg, var(--panel-2), var(--panel)); /* Gradient overlay */
+  border: 1px solid var(--border);      /* Gold border matching theme */
+  box-shadow: var(--shadow);            /* Matching drop shadow */
+  height: 100%;                         /* Stretch to fill container height */
 }
 
-/* Titles in header */
+/* Header styling: Main titles and headings with glow effect */
 header h2{
-  color: var(--text);
-  text-shadow: 0 0 18px var(--gold-soft);
+  /* Main heading styling with subtle gold glow effect */
+  color: var(--text);                   /* Light color for readability */
+  text-shadow: 0 0 18px var(--gold-soft); /* Subtle gold glow around text */
 }
 
 header .fw-bold{
-  color: var(--gold);
+  color: var(--gold);                   /* Bold text in gold for emphasis */
 }
 
-/* Divider */
+/* Divider: Horizontal line separating content sections */
 .divider{
-  border-color:  var(--border);
-  opacity: 1;
+  border-color:  var(--border);         /* Gold color for consistency with theme */
+  opacity: 1;                           /* Fully visible divider line */
 }
 
-/* ===== User Avatar ===== */
+/* ===== USER AVATAR: PROFILE PICTURE STYLING ===== */
+/* Circular avatar styling with gold border and subtle shadow for depth */
+
 .avatar{
-  width: 58px;
+  width: 58px;                          /* Fixed square dimension for avatar */
   height: 58px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 22px;
-  border: 2px solid  var(--border);
-  background: var(--gold-soft);
-  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+  border-radius: 50%;                   /* Makes square into circle */
+  display: grid;                        /* Use CSS grid for centering */
+  place-items: center;                  /* Center content both horizontally and vertically */
+  font-size: 22px;                      /* Large emoji or initial for avatar display */
+  border: 2px solid  var(--border);     /* Gold border around avatar circle */
+  background: var(--gold-soft);         /* Semi-transparent gold background */
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25); /* Subtle drop shadow for elevation */
 }
 
-/* LVL / VIP row styling */
+/* ===== PROFILE INFO ROW: LEVEL AND VIP STATUS ===== */
+/* Displays user's current level and VIP badge next to avatar */
+
 .col-lg-5 .fw-bold{
-  font-family: var(--title-font);
-  letter-spacing: 0.4px;
-}
-.col-lg-5 .fw-bold:last-child{
-  color: var(--gold);
-  border: 1px solid  var(--border);
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--gold-soft);
+  /* Bold text in profile info row (level and VIP) */
+  font-family: var(--title-font);       /* Cinzel font for fantasy aesthetic */
+  letter-spacing: 0.4px;                /* Spreads characters for luxury feel */
 }
 
-/* ===== XP Bar (your code upgraded) ===== */
+.col-lg-5 .fw-bold:last-child{
+  /* VIP badge styling - special treatment for last bold element */
+  color: var(--gold);                   /* Gold text for VIP label */
+  border: 1px solid  var(--border);     /* Gold border around badge */
+  padding: 4px 10px;                    /* Padding inside badge */
+  border-radius: 999px;                 /* Pill shape for badge */
+  background: var(--gold-soft);         /* Gold background tint */
+}
+
+/* ===== XP PROGRESS BAR: EXPERIENCE TRACKING ===== */
+/* Animated progress bar showing experience until next level with gradient */
+
 .xp{
-  height: 12px;
-  background: var(--white-soft);
-  border-radius: 999px;
-  overflow: hidden;
-  border: 1px solid  var(--border);
+  /* Main XP bar container */
+  height: 12px;                         /* Slim bar height for clean look */
+  background: var(--white-soft);        /* Subtle light background for contrast */
+  border-radius: 999px;                 /* Rounded ends for smooth appearance */
+  overflow: hidden;                     /* Hides progress fill beyond rounded edges */
+  border: 1px solid  var(--border);     /* Gold border matching theme */
 }
 
 .xp-progress{
-  width: 35%;
-  height: 100%;
-  background: linear-gradient(90deg, var(--success), var(--gold));
+  /* Animated fill inside XP bar showing progress toward next level */
+  width: 35%;                           /* Width percentage determined by JavaScript */
+  height: 100%;                         /* Fill entire bar height */
+  background: linear-gradient(90deg, var(--success), var(--gold)); /* Green to gold gradient */
 }
 
-/* ===== Small polish ===== */
+/* ===== SMALL TEXT STYLING: MUTED LABELS ===== */
+/* Secondary text for less important information and labels */
+
 .small{
-  color: var(--muted);
+  color: var(--muted);                  /* Slightly transparent lighter text for hierarchy */
 }
 
-/* ===== Quick Access big menu buttons ===== */
+/* ===== QUICK ACCESS MENU BUTTONS: HOME PAGE NAVIGATION ===== */
+/* Large interactive menu buttons for quick site navigation */
+
 .menu-btn{
-  border-radius: var(--radius-sm);
-  border: 1px solid  var(--border);
-  background: var(--panel-soft-4);
-  padding: 14px 16px; 
+  /* Large menu button container for main navigation options */
+  border-radius: var(--radius-sm);      /* 12px rounded corners */
+  border: 1px solid  var(--border);     /* Gold border for consistency */
+  background: var(--panel-soft-4);      /* Semi-transparent background */
+  padding: 14px 16px;                   /* Generous padding for finger-friendliness */ 
 }
 
 .menu-btn span{
-  font-family: var(--title-font);
-  letter-spacing: 0.4px;
-  color: var(--text);
-  font-size: 16px;
+  /* Text label inside menu button */
+  font-family: var(--title-font);       /* Cinzel serif for fantasy theme */
+  letter-spacing: 0.4px;                /* Letter spacing for luxury feel */
+  color: var(--text);                   /* Light purple-white text */
+  font-size: 16px;                      /* Readable text size */
 }
 
 .menu-btn .small{
-  margin-top: 4px;
+  /* Subtitle text inside menu button */
+  margin-top: 4px;                      /* Small gap between title and subtitle */
 }
 
 .menu-btn:hover{
-  border-color:  var(--border);
-  background: var(--panel-soft-3);
+  /* Hover state: Brighten background for interactivity feedback */
+  border-color:  var(--border);         /* Keep gold border visible */
+  background: var(--panel-soft-3);      /* Slightly more opaque on hover */
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER STYLING: PAGE BOTTOM SECTION ===== */
+/* Bottom of page with copyright and secondary navigation links */
 footer{
-  color: var(--muted);
-  border-top: 1px solid  var(--border);
-  padding-top: 16px;
-  margin-top: 10px;
+  color: var(--muted);                  /* Muted text for secondary importance */
+  border-top: 1px solid  var(--border); /* Gold border separates footer from content */
+  padding-top: 16px;                    /* Space between content and footer border */
+  margin-top: 10px;                     /* Spacing above footer border */
 }
 
-/* ===== Daily Quests (left panel) ===== */
+/* ===== DAILY QUESTS: QUEST CARD LIST STYLING ===== */
+/* Individual quest cards showing daily objectives with progress bars and claim buttons */
+
 .quest-wrap{
-  padding-top: 6px;
+  /* Container for quest cards list */
+  padding-top: 6px;                     /* Minor top padding for spacing */
 }
 
 .quest-title{
-  font-family: var(--title-font);
-  letter-spacing: 0.5px;
-  color: var(--text);
+  /* Title/header for quests section */
+  font-family: var(--title-font);       /* Cinzel serif for consistency */
+  letter-spacing: 0.5px;                /* Extra letter spacing for emphasis */
+  color: var(--text);                   /* Light text color */
 }
 
 .quest-card{
-  padding: 12px 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid  var(--border);
-  background: var(--panel-soft-5);
+  /* Individual quest card styling */
+  padding: 12px 12px;                   /* Padding inside card */
+  border-radius: var(--radius-sm);      /* 12px rounded corners */
+  border: 1px solid  var(--border);     /* Gold border for definition */
+  background: var(--panel-soft-5);      /* Semi-transparent panel background */
 }
 
 .quest-card + .quest-card{
-  margin-top: 10px;
+  /* Spacing between consecutive quest cards */
+  margin-top: 10px;                     /* Gap between multiple quest cards */
 }
 
 .quest-name{
-  font-family: var(--title-font);
-  letter-spacing: 0.3px;
-  font-size: 14px;
-  color: var(--text);
+  /* Quest title text styling */
+  font-family: var(--title-font);       /* Cinzel serif font */
+  letter-spacing: 0.3px;                /* Natural spacing for quest names */
+  font-size: 14px;                      /* Readable but compact size */
+  color: var(--text);                   /* Primary light text color */
 }
 
 .quest-sub{
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 2px;
+  /* Subtitle/description text below quest name */
+  font-size: 12px;                      /* Smaller for secondary information */
+  color: var(--muted);                  /* Muted color shows lower importance */
+  margin-top: 2px;                      /* Minimal gap between title and subtitle */
 }
 
 .quest-bar{
-  height: 10px;
-  border-radius: 999px;
-  background: var(--white-soft-2);
-  border: 1px solid  var(--border);
-  overflow: hidden;
+  /* Progress bar container for quest completion % */
+  height: 10px;                         /* Slim bar for non-intrusive appearance */
+  border-radius: 999px;                 /* Rounded ends for smooth look */
+  background: var(--white-soft-2);      /* Very subtle background color */
+  border: 1px solid  var(--border);     /* Gold border for consistency */
+  overflow: hidden;                     /* Clips fill bar within this container */
 }
 
 .quest-bar-fill{
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, var(--success), var(--gold));
+  /* Animated progress indicator inside bar */
+  height: 100%;                         /* Fill entire bar height */
+  width: 0%;                            /* Width controlled by JavaScript (0-100%) */
+  background: linear-gradient(90deg, var(--success), var(--gold)); /* Green to gold gradient */
 }
 
 .quest-claim{
-  border-radius: 10px;
-  padding: 7px 10px;
-  border: 1px solid  var(--border);
-  background: var(--gold-soft);
-  color: var(--gold);
-  white-space: nowrap;
-  text-align: center;
+  /* Reward claim button for completed quests */
+  border-radius: 10px;                  /* Slightly rounded corners */
+  padding: 7px 10px;                    /* Padding inside button */
+  border: 1px solid  var(--border);     /* Gold border */
+  background: var(--gold-soft);         /* Semi-transparent gold background */
+  color: var(--gold);                   /* Gold text matching background */
+  white-space: nowrap;                  /* Prevents text wrapping */
+  text-align: center;                   /* Center the text in button */
 }
 
 .quest-claim:hover{
-  background: var(--gold-soft-2);
-  border-color:  var(--border);
+  /* Hover feedback for claim button */
+  background: var(--gold-soft-2);       /* Slightly more opaque gold */
+  border-color:  var(--border);         /* Keep gold border visible */
 }
 
-/* ===== Main Hub (Website page) helpers ===== */
+/* ===== MAIN HUB PAGE: NAVIGATION HUB STYLING ===== */
+/* Large card grid layout for main hub page with interactive navigation elements */
 
 .hub-stack{
-  display: grid;
-  gap: 12px;
+  /* Container for hub cards - uses grid layout */
+  display: grid;                        /* CSS Grid layout for flexible arrangement */
+  gap: 12px;                            /* Space between grid items */
 }
 
 .hub-card{
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--panel-soft-5);
-  padding: 16px 16px;
-  box-shadow: var(--shadow);
+  /* Large navigation card for each major section (Auction, Market, etc) */
+  border-radius: var(--radius);         /* 16px corners for modern appearance */
+  border: 1px solid var(--border);      /* Gold border */
+  background: var(--panel-soft-5);      /* Semi-transparent panel background */
+  padding: 16px 16px;                   /* Internal padding for content spacing */
+  box-shadow: var(--shadow);            /* Drop shadow for elevation */
 }
 
 .hub-card:hover{
-  background: var(--panel-soft-3);
-  transform: translateY(-1px);
-  transition: transform .15s ease, background .15s ease;
+  /* Interactive hover state for hub cards */
+  background: var(--panel-soft-3);      /* More opaque background on hover */
+  transform: translateY(-1px);          /* Slight upward lift for depth effect */
+  transition: transform .15s ease, background .15s ease; /* Smooth animation */
 }
 
 .hub-mini{
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  background: var(--panel-soft-4);
-  padding: 14px 14px;
+  /* Smaller card variant for secondary hub options */
+  border-radius: var(--radius-sm);      /* 12px corners */
+  border: 1px solid var(--border);      /* Gold border */
+  background: var(--panel-soft-4);      /* Slightly more transparent background */
+  padding: 14px 14px;                   /* Compact padding */
 }
 
 .hub-mini:hover{
-  background: var(--panel-soft-3);
+  /* Hover state for small hub card - brightens background */
+  background: var(--panel-soft-3);      /* More opaque on hover */
 }
 
 .hub-title{
-  font-family: var(--title-font);
-  letter-spacing: 0.4px;
-  color: var(--text);
+  /* Card title text inside hub cards */
+  font-family: var(--title-font);       /* Cinzel serif font */
+  letter-spacing: 0.4px;                /* Letter spacing for luxury */
+  color: var(--text);                   /* Primary light text */
 }
+
+/* ===== CAROUSEL STYLING: ROTATING ITEM DISPLAY ===== */
+/* Bootstrap carousel customization for Market and DailyShop carousels */
  
 .carousel-indicators {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
-  border-color:  var(--border);
-  bottom: -55px;
-  padding: 2px;
-  background: var(--panel);
+  /* Dots at bottom of carousel for slide navigation */
+  border-radius: var(--radius-sm);      /* Rounded corners on indicator container */
+  border: 1px solid var(--border);      /* Gold border around indicators */
+  border-color:  var(--border);         /* Double specification for clarity */
+  bottom: -55px;                        /* Position below carousel */
+  padding: 2px;                         /* Small internal padding */
+  background: var(--panel);             /* Full opacity background for visibility */
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 1;
+  /* Left/right arrow buttons for manual carousel navigation */
+  width: auto;                          /* Auto width for icon buttons */
+  top: 50%;                             /* Vertically centered */
+  transform: translateY(-50%);          /* Precise centering */
+  opacity: 1;                           /* Fully visible controls */
 }
 
 .carousel-control-prev {
-  left: -20px;
+  /* Left arrow positioning outside carousel */
+  left: -20px;                          /* Position to the left of carousel */
 }
 
 .carousel-control-next {
-  right: -20px;
+  /* Right arrow positioning outside carousel */
+  right: -20px;                         /* Position to the right of carousel */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: brightness(1.2);
+  /* Arrow icon styling - brightness boost for visibility */
+  filter: brightness(1.2);              /* 120% brightness for better contrast */
 }
 
+/* ===== SEARCH INPUT: FILTERING AND SEARCH FIELDS ===== */
+/* Styled search input used in AuctionHome and other listing pages */
+
 .search-input {
-  background-color: var(--bg);
-  color: var(--text);
-  border: 2px solid var(--border);
-  border-radius: var(--radius-sm);
+  /* Search/filter input field styling */
+  background-color: var(--bg);          /* Dark background matching page */
+  color: var(--text);                   /* Light text for dark theme */
+  border: 2px solid var(--border);      /* Gold border for emphasis */
+  border-radius: var(--radius-sm);      /* 12px rounded corners */
 }
 
 .search-input::placeholder {
-  color: var(--muted);
+  /* Placeholder text color when input is empty */
+  color: var(--muted);                  /* Muted color shows it's optional */
 }
 
-/*bid history background colour*/
+/* ===== BID HISTORY: BID TRACKING LIST ===== */
+/* Styles for the bid history list shown on auction detail pages */
+
 #bidHistoryList li {
-  background-color: var(--panel-dark);
-  color: var(--text);
-  border: 1px solid var(--border-dark);
+  /* Individual bid history list item styling */
+  background-color: var(--panel-dark);  /* Darker panel background for list items */
+  color: var(--text);                   /* Light text for readability */
+  border: 1px solid var(--border-dark); /* Darker border for subtle definition */
 }
 
 .dividerV {
-  border-left: 2px solid var(--border);
-  height: 100%;
-  margin: 0 10px;
+  /* Vertical divider line between columns */
+  border-left: 2px solid var(--border); /* Gold vertical line */
+  height: 100%;                         /* Stretches full height */
+  margin: 0 10px;                       /* Spacing on left/right of divider */
 }
 
 .stars {
-  color: var(--gold);
-  font-size: 1rem;
-  margin-left: 6px;
-  letter-spacing: 1px;
+  /* Star rating display styling */
+  color: var(--gold);                   /* Gold stars for emphasis */
+  font-size: 1rem;                      /* Standard size for star symbols */
+  margin-left: 6px;                     /* Space before stars (after text) */
+  letter-spacing: 1px;                  /* Spreads stars apart for visibility */
 }
 
 .item-image {
-  width: 100%;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  /* Container for item images in listings */
+  width: 100%;                          /* Full width of container */
+  height: 180px;                        /* Fixed height for uniform appearance */
+  display: flex;                        /* Flexbox for centering image */
+  align-items: center;                  /* Vertically center image */
+  justify-content: center;              /* Horizontally center image */
+  overflow: hidden;                     /* Clips images that exceed container */
 }
 
+/* ===== GOLD FRAME: PREMIUM ITEM IMAGE BORDER ===== */
+/* Special gold-bordered frame for prominent item display in auctions and details pages */
 
 .gold-frame {
-  display: inline-block; 
-  border: 3px solid gold;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-  width: 90%;
-  max-width: 200px;
-  margin: 0 auto;
+  /* Container for premium item image with gold border */
+  display: inline-block;                /* Inline display for flexible sizing */
+  border: 3px solid gold;               /* Bold gold border - premium appearance */
+  border-radius: 16px;                  /* 16px rounded corners */
+  overflow: hidden;                     /* Clips image to frame boundaries */
+  background: #000;                     /* Pure black background behind image */
+  width: 90%;                           /* 90% of parent width */
+  max-width: 200px;                     /* Cap maximum width at 200px */
+  margin: 0 auto;                       /* Center frame in parent */
 }
 
 .gold-frame img {
-  max-width: 80%; 
-  height: auto; 
-  display: block;
-  margin: 0 auto;  
+  /* Image inside gold frame border */
+  max-width: 80%;                       /* Images limited to 80% of frame */
+  height: auto;                         /* Maintains aspect ratio */
+  display: block;                       /* Block display removes inline spacing */
+  margin: 0 auto;                       /* Horizontally center image */
 }
 
+/* ===== RESPONSIVE DESIGN: MOBILE LAYOUT ADJUSTMENTS ===== */
+/* Media query for tablets and mobile devices (max-width 576px) */
 
-/* Mobile tweaks */
 @media (max-width: 576px){
+  /* Navigation buttons: Remove left margin on mobile for better spacing */
   #nav .btn{
-    margin-left: 0;
-    margin-top: 10px;
+    margin-left: 0;                     /* No left margin - saves space on mobile */
+    margin-top: 10px;                   /* Vertical spacing between stacked buttons */
   }
 }
 
-/* Market page item card styling */
+/* ===== MARKET PAGE: ITEM CARD GRID LAYOUTS ===== */
+/* Responsive layout for Market and DailyShop item cards with image and details */
+
 .item-card {
-  height: 100%;
+  /* Container for single item card in market grids */
+  height: 100%;                         /* Fill entire grid cell height */
 }
 
 .item-card .row {
-  height: 100%;
+  /* Row inside card container */
+  height: 100%;                         /* Stretch to fill card height */
 }
 
-/* Ensure columns stretch to fill available height */
 .item-card .col-12 {
-  display: flex;
-  flex-direction: column;
+  /* Full-width columns on mobile (col-12) */
+  display: flex;                        /* Flexbox layout for flexible spacing */
+  flex-direction: column;               /* Stacks content vertically */
 }
 
 .item-card .col-lg-7 {
-  justify-content: center;
-  align-items: center;
+  /* Image column (7 units wide on large screens) */
+  justify-content: center;              /* Center image vertically */
+  align-items: center;                  /* Center image horizontally */
 }
 
 .item-card .col-lg-5 {
-  justify-content: space-between;
+  /* Details column (5 units wide on large screens) - item name, price, buttons */
+  justify-content: space-between;       /* Space content to top and bottom */
 }

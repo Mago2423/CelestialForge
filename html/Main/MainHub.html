@@ -1,3 +1,5 @@
+<!-- ===== MAIN HUB NAVIGATION PAGE ===== -->
+<!-- Central hub with navigation to Auction, Market, Quests, Collection, and Social features -->
 <!doctype html>
 <html lang="en">
 
@@ -28,6 +30,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
     <div class="container">
+      <!-- .container centers content and adds horizontal padding -->
 
       <!-- Logo and branding text displayed in bold on left side of navbar -->
       <a class="navbar-brand fw-bold" href="../../index.html">
@@ -85,10 +88,12 @@
 
       <hr class="divider my-3">
 
-      <!-- Desktop: 2 columns. Mobile: stacked -->
+      <!-- ===== MAIN HUB SECTIONS ===== -->
+      <!-- .row and .g-3: Bootstrap grid row with gutter spacing, 2 columns on desktop, stacked on mobile. -->
       <div class="row g-3">
 
-        <!-- LEFT: MAIN (Auction / Market / Collection) -->
+        <!-- ===== LEFT COLUMN: MAIN FEATURES ===== -->
+        <!-- .col-12 for full width on mobile, .col-lg-7 for 7/12 width on large screens. -->
         <section class="col-12 col-lg-7">
           <div class="p-4">
             <div class="d-flex align-items-center justify-content-between mb-2">
@@ -96,15 +101,20 @@
               <span class="small">Core features</span>
             </div>
 
+            <!-- .hub-stack: Custom stack of feature cards. .mt-3 for margin top. -->
             <div class="hub-stack mt-3">
+              <!-- .hub-card, .text-decoration-none: Custom card with no underline. -->
               <a class="hub-card text-decoration-none" href="../MainHub/AuctionHome.html">
+                <!-- .d-flex, .align-items-center, .justify-content-between: Flexbox for horizontal layout and spacing. -->
                 <div class="d-flex align-items-center justify-content-between">
                   <span class="hub-title">Auction Home</span>
                   <span class="small">→</span>
                 </div>
+                <!-- .small: Bootstrap small text for description. -->
                 <div class="small">Bid on items, watch listings, join live auctions.</div>
               </a>
 
+              <!-- Market card link -->
               <a class="hub-card text-decoration-none" href="../MainHub/Market.html">
                 <div class="d-flex align-items-center justify-content-between">
                   <span class="hub-title">Market</span>
@@ -113,6 +123,7 @@
                 <div class="small">Buy/sell directly, filter by type and rarity.</div>
               </a>
 
+              <!-- Collection card link -->
               <a class="hub-card text-decoration-none" href="../Profile/Collection.html">
                 <div class="d-flex align-items-center justify-content-between">
                   <span class="hub-title">Collection</span>
@@ -124,7 +135,8 @@
           </div>
         </section>
 
-      <!-- RIGHT: POINTS (grid, no overlap) -->
+      <!-- ===== RIGHT COLUMN: POINTS/UTILITIES ===== -->
+      <!-- .col-12 for full width on mobile, .col-lg-5 for 5/12 width on large screens. -->
       <section class="col-12 col-lg-5">
         <div class="p-4">
           <div class="d-flex align-items-center justify-content-between mb-2">
@@ -132,6 +144,7 @@
             <span class="small">Utilities</span>
           </div>
 
+            <!-- .col-12, .col-md-6, .col-lg-12: Responsive columns for utility links. -->
             <div class="col-12 col-md-6 col-lg-12">
               <a class="hub-mini text-decoration-none d-block" href="../MainHub/DailyShop.html">
                 <div class="hub-title">Daily Shop</div>
@@ -150,6 +163,8 @@
       </section>
     </div>
 
+    <!-- ===== FOOTER ===== -->
+    <!-- .mt-4 for margin top, .d-flex, .flex-wrap, .justify-content-between, .align-items-center, .gap-2 for responsive, spaced footer layout. -->
     <footer class="mt-4">
       <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
         <div class="small">© Celestial Forge</div>

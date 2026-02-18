@@ -1,227 +1,357 @@
 <!doctype html>
 <html lang="en">
+
+<!-- ===== HEAD SECTION ===== -->
+<!-- Contains metadata, page title, and stylesheet links for the Auction Home page -->
 <head>
+    <!-- UTF-8 character encoding: Standard character set for web pages supporting all languages and symbols -->
     <meta charset="utf-8">
+    <!-- Page title: Text displayed in browser tab and used by search engines -->
     <title>Celestial Forge · Home</title>
+    <!-- Viewport meta tag: Ensures page is responsive on mobile devices with proper scaling and width settings -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS framework: Provides responsive grid system, components, and utility classes for styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts import: Cinzel font family for elegant typography and headings -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Normalize CSS stylesheet: Ensures consistent default styling across different web browsers -->
     <link rel="stylesheet" href="../css/normalize.css">
+    <!-- Custom project stylesheet: Contains all project-specific styling and design elements -->
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-    <div class="container">
 
-      <a class="navbar-brand fw-bold" href="../../index.html">
-        CELESTIAL FORGE
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<!-- ===== NAVIGATION BAR ===== -->
+<!-- Bootstrap navigation bar with dark theme, expanded layout on large screens, and responsive menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+  <!-- Container that centers the navbar content and adds horizontal padding for proper alignment -->
+  <div class="container">
 
-      <div id="nav" class="collapse navbar-collapse">
-        <div class="ms-auto d-flex align-items-center">
+    <!-- Logo and branding text displayed in bold on left side of navbar -->
+    <a class="navbar-brand fw-bold" href="../../index.html">
+      CELESTIAL FORGE
+    </a>
+    
+    <!-- Mobile menu toggle button that appears on small screens to collapse/expand navigation -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <!-- Three horizontal lines icon displayed in hamburger menu on mobile devices -->
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <a class="btn" href="../Main/MainHub.html">
-              Main Hub
-          </a>
+    <!-- Collapsible navigation menu that hides on small screens and expands on larger screens -->
+    <div id="nav" class="collapse navbar-collapse">
+      <!-- Flexbox container that pushes navigation buttons to the right and centers them vertically -->
+      <div class="ms-auto d-flex align-items-center">
 
-          <a class="btn nav-active" href="../../index.html">
-            Home
-          </a>
+        <!-- Navigation link to Main Hub page -->
+        <a class="btn" href="../Main/MainHub.html">
+            Main Hub
+        </a>
 
-          <a class="btn" href="../Main/Profile.html">
-              Profile
-          </a>
+        <!-- Navigation link to Home page marked as currently active section -->
+        <a class="btn nav-active" href="../../index.html">
+          Home
+        </a>
+
+        <!-- Navigation link to Profile page -->
+        <a class="btn" href="../Main/Profile.html">
+            Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== MAIN CONTENT SECTION ===== -->
+<!-- Main content area containing header, search, category filters, and item listings -->
+<main>
+
+  <!-- ===== PAGE HEADER AND SEARCH ===== -->
+  <!-- Header section with centered text, horizontal dividers, and search functionality -->
+  <header class="text-center mb-5">
+    <!-- Decorative horizontal divider line above title -->
+    <hr class="divider">
+    <!-- Page heading displayed in uppercase -->
+    <h2 class="text-uppercase">Auction Home</h2>
+    <!-- Decorative horizontal divider line below title -->
+    <hr class="divider">
+    
+    <!-- ===== SEARCH BAR SECTION ===== -->
+    <!-- Container for search form with horizontal padding and vertical padding -->
+    <div class="container py-2">
+      <!-- Search form with flex layout for responsive adjustment -->
+      <form class="d-flex" role="search">
+        <!-- Search input field with Bootstrap styling and custom style class -->
+        <input class="form-control me-2 search-input" type="search" placeholder="Search..." aria-label="Search">
+        <!-- Submit button for search form -->
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- ===== CATEGORY FILTER NAVIGATION ===== -->
+    <!-- Navigation pills for filtering items by category with centered alignment -->
+    <ul class="nav nav-pills justify-content-center my-2" id="sectionNav">
+      <!-- "All" category button - active by default -->
+      <li class="nav-item">
+        <!-- Tab button for viewing all items with data attribute for category filtering -->
+        <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-white" type="button" data-section="all">All</button>
+      </li>
+      <!-- "Magic" category button -->
+      <li class="nav-item">
+        <!-- Tab button for filtering magic-type items -->
+        <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="magic">Magic</button>
+      </li>
+      <!-- "Physical" category button -->
+      <li class="nav-item">
+        <!-- Tab button for filtering physical-type items -->
+        <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="Physical">Physical</button>
+      </li>
+      <!-- "Artifacts" category button -->
+      <li class="nav-item">
+        <!-- Tab button for filtering artifact-type items -->
+        <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="artifacts">Artifacts</button>
+      </li>
+    </ul>
+  </header>
+
+  <!-- ===== ITEMS CONTAINER ===== -->
+  <!-- Main container for all product sections with horizontal padding and centering -->
+  <div class="container">
+
+    <!-- ===== ALL ITEMS SECTION ===== -->
+    <!-- Content section showing all available auction items -->
+    <div class="content-section" id="all">
+      <!-- Section heading -->
+      <h3>All items</h3>
+      <!-- Placeholder text for section content -->
+      <p>all items go here.</p>
+      <!-- Decorative divider -->
+      <hr class="divider my-3">
+
+      <!-- ===== ITEMS GRID ===== -->
+      <!-- Grid layout with 4-unit gap spacing between items -->
+      <div class="row g-4">
+
+        <!-- ===== ITEM 1: COSMIC WAND ===== -->
+        <!-- Column spanning full width on mobile, 4/12 width on large screens -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height for consistent card size -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details with centered alignment -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image with fixed dimensions -->
+              <img src="../pictures/3dwand-removebg-preview.png" alt="weapon" width="100" height="75">
+
+              <!-- Right column for item name and action buttons -->
+              <div>
+                <!-- Item name displayed in bold, large font -->
+                <h3 class="fw-bold fs-4">Cosmic Wand</h3>
+                <!-- Flexbox container for action buttons with gap spacing -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button linking to item details page -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details.html">Details</a>
+                  <!-- Auction button linking to auction page -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction.html">Auction</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ITEM 2: GOD'S VENGEANCE ===== -->
+        <!-- Column spanning full width on mobile, 4/12 width on large screens -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image -->
+              <img src="../pictures/3dscythe-removebg-preview.png" alt="weapon" width="100" height="75">
+
+              <!-- Right column for item information -->
+              <div>
+                <!-- Item name -->
+                <h3 class="fw-bold fs-4">God's Vengence</h3>
+                <!-- Action buttons container -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details2.html">Details</a>
+                  <!-- Auction button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction2.html">Auction</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== ITEM 3: SIMPLE SWORD ===== -->
+        <!-- Column spanning full width on mobile, 4/12 width on large screens -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image -->
+              <img src="../pictures/shadowlessblade-removebg-preview.png" alt="weapon" width="100" height="75">
+
+              <!-- Right column for item information -->
+              <div>
+                <!-- Item name -->
+                <h3 class="fw-bold fs-4">Simple Sword</h3>
+                <!-- Action buttons container -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details3.html">Details</a>
+                  <!-- Auction button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction3.html">Auction</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </nav>
-    <main>
-        <header class="text-center mb-5">
-            <hr class="divider">
-            <h2 class="text-uppercase">Auction Home</h2>
-            <hr class="divider">
-            <div class="container py-2">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-input" type="search" placeholder="Search..." aria-label="Search">
-                    <button class="btn btn-primary" type="submit">Search</button>
-                </form>
-            </div>
-            <!-- TOP SECTION NAV -->
-            <ul class="nav nav-pills justify-content-center my-2" id="sectionNav">
-            <li class="nav-item">
-                <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-white" type="button" data-section="all">All</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="magic">Magic</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="Physical">Physical</button>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link nav-fixed px-3 py-1 panel fw-semibold text-secondary" type="button" data-section="artifacts">Artifacts</button>
-            </li>
-            </ul>
-        </header>
-            <!-- SECTIONS -->
-            <div class="container">
 
-            <div class="content-section" id="all">
-                <h3>All items</h3>
-                <p>all items go here.</p>
-                <hr class="divider my-3">
+    <!-- ===== MAGIC ITEMS SECTION ===== -->
+    <!-- Content section for magic-type items (hidden by default, shown via JavaScript) -->
+    <div class="content-section d-none" id="magic">
+      <!-- Section heading -->
+      <h3>Magic</h3>
+      <!-- Placeholder text for section content -->
+      <p>Magic items go here.</p>
+      <!-- Decorative divider -->
+      <hr class="divider my-3">
 
-                <div class="row g-4">
-                        <div class="col-lg-4">
-                            <div class="panel p-4 h-100">
-                                <div class="d-flex align-items-center gap-3 mb-4">
-                                    <img src="../pictures/3dwand-removebg-preview.png" alt="weapon" width="100" height="75">
+      <!-- ===== MAGIC ITEMS GRID ===== -->
+      <!-- Grid layout with 4-unit gap spacing -->
+      <div class="row g-4">
+        <!-- ===== MAGIC ITEM: COSMIC WAND ===== -->
+        <!-- Magic item card -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image -->
+              <img src="../pictures/3dwand-removebg-preview.png" alt="weapon" width="100" height="75">
 
-                                    <div>
-                                        <h3 class="fw-bold fs-4">Cosmic Wand</h3>
-                                        <div class="d-flex jus gap-3 mb-2">
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Details.html">Details</a>
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Auction.html">Auction</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4">
-                            <div class="panel p-4 h-100">
-                                <div class="d-flex align-items-center gap-3 mb-4">
-                                    <img src="../pictures/3dscythe-removebg-preview.png" alt="weapon" width="100" height="75">
-
-                                    <div>
-                                        <h3 class="fw-bold fs-4">God's Vengence</h3>
-                                        <div class="d-flex jus gap-3 mb-2">
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Details2.html">Details</a>
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Auction2.html">Auction</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4">
-                            <div class="panel p-4 h-100">
-                                <div class="d-flex align-items-center gap-3 mb-4">
-                                    <img src="../pictures/shadowlessblade-removebg-preview.png" alt="weapon" width="100" height="75">
-
-                                    <div>
-                                        <h3 class="fw-bold fs-4">Simple Sword</h3>
-                                        <div class="d-flex jus gap-3 mb-2">
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Details3.html">Details</a>
-                                            <a class="btn btn-primary w-45 my-2" href="../Auction/Auction3.html">Auction</a>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <!-- Right column for item information -->
+              <div>
+                <!-- Item name -->
+                <h3 class="fw-bold fs-4">Cosmic Wand</h3>
+                <!-- Action buttons container -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details.html">Details</a>
+                  <!-- Auction button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction.html">Auction</a>
                 </div>
+              </div>
             </div>
-
-            <div class="content-section d-none" id="magic">
-                <h3>Magic</h3>
-                <p>Magic items go here.</p>
-                <hr class="divider my-3">
-
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="panel p-4 h-100">
-                            <div class="d-flex align-items-center gap-3 mb-4">
-                                <img src="../pictures/3dwand-removebg-preview.png" alt="weapon" width="100" height="75">
-
-                                <div>
-                                    <h3 class="fw-bold fs-4">Cosmic Wand</h3>
-                                    <div class="d-flex jus gap-3 mb-2">
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Details.html">Details</a>
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Auction.html">Auction</a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section d-none" id="Physical">
-                <h3>Physical</h3>
-                <p>Physical items go here.</p>
-                <hr class="divider my-3">
-
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="panel p-4 h-100">
-                            <div class="d-flex align-items-center gap-3 mb-4">
-                                <img src="../pictures/shadowlessblade-removebg-preview.png" alt="weapon" width="100" height="75">
-
-                                <div>
-                                    <h3 class="fw-bold fs-4">Shadowless Blade</h3>
-                                    <div class="d-flex jus gap-3 mb-2">
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Details3.html">Details</a>
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Auction3.html">Auction</a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section d-none" id="artifacts">
-                <h3>artifacts</h3>
-                <p>artifacts items go here.</p>
-                <hr class="divider my-3">
-
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="panel p-4 h-100">
-                            <div class="d-flex align-items-center gap-3 mb-4">
-                                <img src="../pictures/3dscythe-removebg-preview.png" alt="weapon" width="100" height="75">
-
-                                <div>
-                                    <h3 class="fw-bold fs-4">God's Vengence</h3>
-                                    <div class="d-flex jus gap-3 mb-2">
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Details2.html">Details</a>
-                                        <a class="btn btn-primary w-45 my-2" href="../Auction/Auction2.html">Auction</a>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
+      </div>
+    </div>
 
-    </main>
-    <footer class="container pb-4">
+    <!-- ===== PHYSICAL ITEMS SECTION ===== -->
+    <!-- Content section for physical-type items (hidden by default, shown via JavaScript) -->
+    <div class="content-section d-none" id="Physical">
+      <!-- Section heading -->
+      <h3>Physical</h3>
+      <!-- Placeholder text for section content -->
+      <p>Physical items go here.</p>
+      <!-- Decorative divider -->
+      <hr class="divider my-3">
 
+      <!-- ===== PHYSICAL ITEMS GRID ===== -->
+      <!-- Grid layout with 4-unit gap spacing -->
+      <div class="row g-4">
+        <!-- ===== PHYSICAL ITEM: SHADOWLESS BLADE ===== -->
+        <!-- Physical item card -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image -->
+              <img src="../pictures/shadowlessblade-removebg-preview.png" alt="weapon" width="100" height="75">
 
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../Javascript/AuctionHome.js"></script>
+              <!-- Right column for item information -->
+              <div>
+                <!-- Item name -->
+                <h3 class="fw-bold fs-4">Shadowless Blade</h3>
+                <!-- Action buttons container -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details3.html">Details</a>
+                  <!-- Auction button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction3.html">Auction</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ARTIFACTS SECTION ===== -->
+    <!-- Content section for artifact-type items (hidden by default, shown via JavaScript) -->
+    <div class="content-section d-none" id="artifacts">
+      <!-- Section heading -->
+      <h3>artifacts</h3>
+      <!-- Placeholder text for section content -->
+      <p>artifacts items go here.</p>
+      <!-- Decorative divider -->
+      <hr class="divider my-3">
+
+      <!-- ===== ARTIFACTS GRID ===== -->
+      <!-- Grid layout with 4-unit gap spacing -->
+      <div class="row g-4">
+        <!-- ===== ARTIFACT ITEM: GOD'S VENGEANCE ===== -->
+        <!-- Artifact item card -->
+        <div class="col-lg-4">
+          <!-- Custom panel container with padding and full height -->
+          <div class="panel p-4 h-100">
+            <!-- Flexbox layout for item image and details -->
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <!-- Item image -->
+              <img src="../pictures/3dscythe-removebg-preview.png" alt="weapon" width="100" height="75">
+
+              <!-- Right column for item information -->
+              <div>
+                <!-- Item name -->
+                <h3 class="fw-bold fs-4">God's Vengence</h3>
+                <!-- Action buttons container -->
+                <div class="d-flex jus gap-3 mb-2">
+                  <!-- Details button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Details2.html">Details</a>
+                  <!-- Auction button -->
+                  <a class="btn btn-primary w-45 my-2" href="../Auction/Auction2.html">Auction</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ===== FOOTER SECTION ===== -->
+<!-- Footer area with copyright information -->
+<footer class="container pb-4">
+  <!-- Empty footer reserved for future content -->
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<!-- Bootstrap JavaScript: Powers navbar and responsive components -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Auction Home functionality: Handles category filtering and item search logic -->
+<script src="../Javascript/AuctionHome.js"></script>
+
 </body>
 </html>
